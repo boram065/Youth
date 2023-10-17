@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth</title>
+</head>
+<body>
+    <div id="photos"></div>
+
+    <script>
+        // URL 매개변수에서 이미지 데이터 읽어오기
+        const urlParams = new URLSearchParams(window.location.search);
+        const photoData = urlParams.get('photoData');
+
+        // 이미지 데이터를 화면에 표시
+        if (photoData) {
+            const imgElement = document.createElement('img');
+            imgElement.src = decodeURIComponent(photoData);
+            document.getElementById('photos').appendChild(imgElement);
+        }
+    </script>
+</body>
+</html>

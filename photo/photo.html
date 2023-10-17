@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹캠으로 사진 찍기</title>
+    <link rel="stylesheet" href="/css/photo.css">
+    <style>
+        #video {
+            width: 100%;
+            max-width: 640px;
+        }
+        #canvas {
+            display: none;
+        }
+        #photo {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
+    <div id="photo"></div>
+
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const photoContainer = document.getElementById('photo');
+        const captureButton = document.getElementById('captureButton');
+
+        let photosTaken = 0;
+        const totalPhotos = 6;
+
+        // 웹캠에서 비디오 스트림 가져오기
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                video.srcObject = stream;
+            })
+            .catch(function(err) {
+                console.error('웹캠을 사용할 수 없습니다: ', err);
+            });
+
+        // 사진 찍기 함수
+        function takePhoto() {
+            // canvas에 비디오 프레임을 그리기
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // canvas의 이미지 데이터를 가져와서 화면에 표시
+            const imageDataUrl = canvas.toDataURL('image/png');
+            const imgElement = document.createElement('img');
+            imgElement.src = imageDataUrl;
+            photoContainer.appendChild(imgElement);
+
+            photosTaken++;
+
+            // 모든 사진을 찍었을 때, 촬영 중지
+            if (photosTaken >= totalPhotos) {
+                clearInterval(interval);
+
+                const photoData = encodeURIComponent(canvas.toDataURL('image/png'));
+            window.location.href = `choice.html?photoData=${photoData}`;
+            }
+        }
+
+        // 5초 간격으로 사진 찍기 시작
+        const interval = setInterval(takePhoto, 1000); // 5초(5000 밀리초) 간격으로 사진 찍기
+    </script>
+</body>
+</html>
