@@ -28,7 +28,8 @@ body {
 }
 
 header {
-    background-color: black;
+    backdrop-filter: blur(10px);
+    background-color: rgba(244, 237, 237, 0.8);
     font-family: var(--body-font);
     position: fixed;                 /* 스크롤 해도 항상 위치 고정함 */
     top: 0;
@@ -43,28 +44,32 @@ nav {
 
 .nav.container {
     display: flex;                  /* 기본값 : 수평정렬 */
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;            /* 교차축 가운데 맞춤 */
     padding: 0 16px;
-    color: #fff;
+}
+
+.moblie-title {
+    display: none;
 }
 
 .nav.container a {
-    color: #fff;
+    color: #533422;
+    text-decoration-line: none;
 }
 
 .nav-list {
     display: flex;
     column-gap: 100px; /* 간격 */
-    font-weight: var(--font-bold);
-}
-
-a {
-    text-decoration-line: none;
 }
 
 .nav-item {
     list-style-type: none;
+    font-size: var(--small-font-size);
+}
+
+.nav-item:first-child {
+    margin-right: 200px;
 }
 
 .nav-toggle {
@@ -83,6 +88,12 @@ a {
 
 /*휴대폰*/
 @media screen and (max-width: 540px) {
+    .moblie-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     /* .nav-logo 가운데 */
     .nav-logo {
         margin: 0 auto;
@@ -90,29 +101,36 @@ a {
     /* .nav-toggle 보이게 */
     .nav-toggle {
         visibility: visible;
-        position: absolute; /* .nav-logo 가운데 정확히 위치 */
-        right: 16px;        /* 오른쪽 여백 16px 위치로 */
+        position: absolute;
+        right: 16px;
     }
 
     /* .nav-list navbar 아래로 */
     .nav-list {
-        position: absolute;                             /* 화면에 절댓값 */
-        top: 44px;                                      /* navbar 아래로 */
-        right: 0;                                       /* 너비를 양 옆으로 늘리기 */
-        left: 0;                                        /* 너비를 양 옆으로 늘리기 */
-        flex-direction: column;                         /* 수직 배열 */
-        /* align-items: center;                            교차축 가운데 */
-        text-align: center;                             /* 글자 가윤데 */
-        background-color: rgba(239, 177, 28, 0.4);
-        backdrop-filter: blur(8px);                     /* blur 효과 */
+        position: absolute; 
+        top: 25px;
+        right: 0;  
+        left: 0; 
+        flex-direction: column; 
+        text-align: center;
+        background-color: #fff;
+        backdrop-filter: blur(8px);
         height: 0;
         overflow: hidden;
         transition: 0.2s;
     }
 
     .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 1em 0;
-        border-bottom: 2px solid #fff;
+        margin-right: 35px;
+        margin-top: 10px;
+    }
+
+    .nav-item:first-child {
+        display: none;
     }
 
     .nav-link {
@@ -121,7 +139,7 @@ a {
 
     /* .show-menu하면, .nav-list 보이게 */
     .show-menu { 
-        height: 156px;
+        height: 170px;
     }
     
 }
