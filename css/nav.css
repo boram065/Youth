@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+:root {
+    /* color */
+    --fist-color: #008156;
+    --second-color: #efb11c;
+    --body-color: #fff;
+
+    --body-font:'Nanum Myeongjo', serif;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.8rem;
+    --smaller-font-size: 0.6rem;
+    --font-thin: 200;
+    --font-regular: 400;
+    --font-bold: 700;
+}
+
+body {
+    color: #000;
+    font-family: var(--body-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+header {
+    background-color: black;
+    font-family: var(--body-font);
+    position: fixed;                 /* 스크롤 해도 항상 위치 고정함 */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;                   /* 책 올릴 때 header 위로 올라가는 문제 해결 */
+}
+
+nav {
+    height: 44px;
+}
+
+.nav.container {
+    display: flex;                  /* 기본값 : 수평정렬 */
+    justify-content: space-between;
+    align-items: center;            /* 교차축 가운데 맞춤 */
+    padding: 0 16px;
+    color: #fff;
+}
+
+.nav.container a {
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 100px; /* 간격 */
+    font-weight: var(--font-bold);
+}
+
+a {
+    text-decoration-line: none;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.nav-toggle {
+    font-size: var(--h2-font-size);
+}
+
+.nav-toggle {
+    font-size: var(--h2-font-size);
+    visibility: hidden;
+}
+
+/*태블릿*/
+@media screen and (max-width: 720px) {
+    
+}
+
+/*휴대폰*/
+@media screen and (max-width: 540px) {
+    /* .nav-logo 가운데 */
+    .nav-logo {
+        margin: 0 auto;
+    }
+    /* .nav-toggle 보이게 */
+    .nav-toggle {
+        visibility: visible;
+        position: absolute; /* .nav-logo 가운데 정확히 위치 */
+        right: 16px;        /* 오른쪽 여백 16px 위치로 */
+    }
+
+    /* .nav-list navbar 아래로 */
+    .nav-list {
+        position: absolute;                             /* 화면에 절댓값 */
+        top: 44px;                                      /* navbar 아래로 */
+        right: 0;                                       /* 너비를 양 옆으로 늘리기 */
+        left: 0;                                        /* 너비를 양 옆으로 늘리기 */
+        flex-direction: column;                         /* 수직 배열 */
+        /* align-items: center;                            교차축 가운데 */
+        text-align: center;                             /* 글자 가윤데 */
+        background-color: rgba(239, 177, 28, 0.4);
+        backdrop-filter: blur(8px);                     /* blur 효과 */
+        height: 0;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+
+    .nav-item {
+        padding: 1em 0;
+        border-bottom: 2px solid #fff;
+    }
+
+    .nav-link {
+        display: block;
+    }
+
+    /* .show-menu하면, .nav-list 보이게 */
+    .show-menu { 
+        height: 156px;
+    }
+    
+}
