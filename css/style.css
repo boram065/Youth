@@ -1,1 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+*{
+    font-family: 'Gowun Batang', serif;
+}
+
+:root {
+    /* color */
+    --fist-color: #008156;
+    --second-color: #efb11c;
+    --white: #fff;
+    --main-color: #DEA465;
+
+    --body-font:'Nanum Myeongjo', serif;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.8rem;
+    --smaller-font-size: 0.6rem;
+    --font-thin: 200;
+    --font-regular: 400;
+    --font-bold: 700;
+}
