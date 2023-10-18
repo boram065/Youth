@@ -5,21 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/choice.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
 </head>
 <body>
-    <div id="photos"></div>
+    <header>
+        <nav class="nav container">
 
-    <script>
-        // URL 매개변수에서 이미지 데이터 읽어오기
-        const urlParams = new URLSearchParams(window.location.search);
-        const photoData = urlParams.get('photoData');
+            <p><a href="" class="moblie-title">Youth</a></p>
+            
+            <ul class="nav-list">
+                <li class="nav-item"><a href="" class="nav-link">Youth</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Photo</a></li>
+                <li class="nav-item"><a href="" class="nav-link">song</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Gallery</a></li>
+            </ul>
 
-        // 이미지 데이터를 화면에 표시
-        if (photoData) {
-            const imgElement = document.createElement('img');
-            imgElement.src = decodeURIComponent(photoData);
-            document.getElementById('photos').appendChild(imgElement);
-        }
-    </script>
+            <div class="nav-toggle" id="nav_toggle">
+                <i class="bi bi-list"></i>
+            </div>
+
+        </nav>
+    </header>
+    <div class="frame-container">
+        <div class="old-film-box">
+            <img src="../image/old-film.png" alt="옛날필름네컷">
+            <div class="film-text">
+                <h1>옛날필름네컷</h1>
+                <p>레트로한 필터와 옛날 필름으로<br>그때의 향수를 부르는 프레임</p>
+                <button onclick="window.location.href='post-retro.html'">프레임 선택</button>
+            </div>
+        </div>
+
+        <div class="haduri-film-box">
+            <div class="haduri-box">
+                <h1 class="film-name">하두리네컷</h1>
+                <p class="sub-text">그때 그시절 핫했던 하두리<br>그때의 그 감성을 그대로 재현한 프레임</p>
+                <button class="choice-frame" onclick="window.location.href='post-haduri.html'"s>프레임 선택</button>
+            </div>
+            <img src="../image/haduri-film.png" alt="하두리네컷">
+        </div>
+    </div>
+
+    <script src="../js/nav.js"></script>
 </body>
 </html>
