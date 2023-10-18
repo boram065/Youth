@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth</title>
+    <link rel="stylesheet" href="./css/post.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <div class="haduri">
+       <form method="post" enctype="multipart/form-data">
+           <div class="button">
+               <label for="chooseFile1">
+                   이미지 업로드
+               </label>
+               <label for="chooseFile2">
+                   이미지 업로드
+               </label>
+               <label for="chooseFile3">
+                   이미지 업로드
+               </label>
+               <label for="chooseFile4">
+                   이미지 업로드
+               </label>
+           </div>
+           <input type="file" id="chooseFile1" name="chooseFile1" accept="image/*" onchange="loadFile(this)">
+           <input type="file" id="chooseFile2" name="chooseFile2" accept="image/*" onchange="loadFile(this)">
+           <input type="file" id="chooseFile3" name="chooseFile3" accept="image/*" onchange="loadFile(this)">
+           <input type="file" id="chooseFile4" name="chooseFile4" accept="image/*" onchange="loadFile(this)">
+       </form>
+       <div class="image-show" id="image-show"></div>
+       <div class="image-show" id="image-show"></div>
+       <div class="image-show" id="image-show"></div>
+       <div class="image-show" id="image-show"></div>
+   </div>
+    
+    <script src="./js/post.js"></script>
+</body>
+</html>
