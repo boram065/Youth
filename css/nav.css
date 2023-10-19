@@ -1,21 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 :root {
-    /* color */
-    --fist-color: #008156;
-    --second-color: #efb11c;
-    --body-color: #fff;
-
     --body-font:'Nanum Myeongjo', serif;
-    --h1-font-size: 2rem;
     --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.8rem;
-    --smaller-font-size: 0.6rem;
-    --font-thin: 200;
-    --font-regular: 400;
-    --font-bold: 700;
+    --small-font-size: 0.9rem;
 }
 
 body {
@@ -28,8 +16,8 @@ body {
 }
 
 header {
-    backdrop-filter: blur(10px);
-    background-color: rgba(244, 237, 237, 0.8);
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.40);
     font-family: var(--body-font);
     position: fixed;                 /* 스크롤 해도 항상 위치 고정함 */
     top: 0;
@@ -39,7 +27,7 @@ header {
 }
 
 nav {
-    height: 44px;
+    height: 40px;
 }
 
 .nav.container {
@@ -83,7 +71,9 @@ nav {
 
 /*태블릿*/
 @media screen and (max-width: 720px) {
-    
+    .nav-item:first-child {
+        margin-right: 70px;
+    }
 }
 
 /*휴대폰*/
@@ -108,7 +98,7 @@ nav {
     /* .nav-list navbar 아래로 */
     .nav-list {
         position: absolute; 
-        top: 25px;
+        top: 20px;
         right: 0;  
         left: 0; 
         flex-direction: column; 
