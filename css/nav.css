@@ -27,7 +27,7 @@ header {
 }
 
 nav {
-    height: 44px;
+    height: 40px;
 }
 
 .nav.container {
@@ -71,7 +71,9 @@ nav {
 
 /*태블릿*/
 @media screen and (max-width: 720px) {
-    
+    .nav-item:first-child {
+        margin-right: 70px;
+    }
 }
 
 /*휴대폰*/
@@ -96,7 +98,7 @@ nav {
     /* .nav-list navbar 아래로 */
     .nav-list {
         position: absolute; 
-        top: 25px;
+        top: 20px;
         right: 0;  
         left: 0; 
         flex-direction: column; 
