@@ -2,17 +2,31 @@ body {
     overflow: hidden;
 }
 
-.backgroundImg img{
-    width: 100%;
-    height: 100%;
-    margin-left: -20px;
-    margin-top: -10px;
-}
-
 .backgroundImg {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1540px;
-    height: 720px;
+    width: 100vw;
+    height: 102vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.backgroundImg img{
+    width: 100%;
+    height: 100%;
+    margin-left: -16px;
+    margin-top: -20px;
+}
+
+
+@media screen and (max-width: 720px) {
+    .backgroundImg {
+        width: 102vw;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    
 }
