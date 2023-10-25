@@ -7,35 +7,61 @@
     <title>Youth</title>
     <link rel="stylesheet" href="./css/post.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
 </head>
 <body>
-   <div class="haduri">
-       <form method="post" enctype="multipart/form-data">
-           <div class="button">
-               <label for="chooseFile1">
-                   이미지 업로드
-               </label>
-               <label for="chooseFile2">
-                   이미지 업로드
-               </label>
-               <label for="chooseFile3">
-                   이미지 업로드
-               </label>
-               <label for="chooseFile4">
-                   이미지 업로드
-               </label>
-           </div>
-           <input type="file" id="chooseFile1" name="chooseFile1" accept="image/*" onchange="loadFile(this)">
-           <input type="file" id="chooseFile2" name="chooseFile2" accept="image/*" onchange="loadFile(this)">
-           <input type="file" id="chooseFile3" name="chooseFile3" accept="image/*" onchange="loadFile(this)">
-           <input type="file" id="chooseFile4" name="chooseFile4" accept="image/*" onchange="loadFile(this)">
-       </form>
-       <div class="image-show" id="image-show"></div>
-       <div class="image-show" id="image-show"></div>
-       <div class="image-show" id="image-show"></div>
-       <div class="image-show" id="image-show"></div>
-   </div>
-    
+    <header>
+        <nav class="nav container">
+
+            <p><a href="" class="moblie-title">Youth</a></p>
+            
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../main/index.html" class="nav-link">Youth</a></li>
+                <li class="nav-item"><a href="../photo/index.html" class="nav-link">Photo</a></li>
+                <li class="nav-item"><a href="" class="nav-link">song</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Gallery</a></li>
+            </ul>
+
+            <div class="nav-toggle" id="nav_toggle">
+                <i class="bi bi-list"></i>
+            </div>
+
+        </nav>
+    </header>
+    <section class="frame">
+        <div class="photos">
+            <div class="haduri-logo"></div>
+            <div id="image-show1" class="photo-frame image-show">
+                <input type="file" id="chooseFile1" name="chooseFile1" accept="image/*" onchange="loadFile(this, 'image-show1')">
+                <label for="chooseFile1">이미지 업로드</label>
+            </div>
+            <div id="image-show2" class="photo-frame image-show">
+                <input type="file" id="chooseFile2" name="chooseFile2" accept="image/*" onchange="loadFile(this, 'image-show2')">
+                <label for="chooseFile2">이미지 업로드</label> 
+            </div>
+            <div id="image-show3" class="photo-frame image-show">
+                <input type="file" id="chooseFile3" name="chooseFile3" accept="image/*" onchange="loadFile(this, 'image-show3')">
+                <label for="chooseFile3">이미지 업로드</label> 
+            </div>
+            <div id="image-show4" class="photo-frame image-show">
+                <input type="file" id="chooseFile4" name="chooseFile4" accept="image/*" onchange="loadFile(this, 'image-show4')">
+                <label for="chooseFile4">이미지 업로드</label> 
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="f-title">Youth</p>
+        </div>
+    </section>
+    <section class="write">
+        <textarea name="input" class="input" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
+    </section>
+    <section class="song-container">
+        <!-- <img src="../image/song.png" alt="mp3" class="mp3"> -->
+        <div class="mp3">
+            <div class="song-box"><p class="song" id="song">♬ 박보람 - 혜화동(혹은 쌍문동) ♬</p></div>
+        </div>
+    </section>
     <script src="./js/post.js"></script>
 </body>
 </html>
