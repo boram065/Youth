@@ -1,108 +1,119 @@
-html {
-    height: 100%;
-}
-
 body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
     align-items: center;
 }
-
-.container {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
+.frame {
+    
+	transform: rotate(-5deg);
+    /* position: absolute; */
+	width: 250px;
+	background-color: #000000;
+	height: 76%;
 }
-
-.image-upload {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.photos {
+	margin-top: 10%;
+    /* margin-bottom: 10% ; */
+    height: 86%;
 }
-form{
-    height: 100%;
-}
-.button {
-    height: 94%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 20%;
-    text-align: center;
-    /* background-color: aqua; */
-}
-.haduri{
+.photo-frame {
     position: relative;
-    background-image: url(/image/haduri-film.png);
+	background-color: white;
+	margin: 5% 6%;
+	height: 23%;
     background-size: cover;
-        /* object-fit:cover; */
-    width: 11%;
-    height: 60%;
-    transform:rotate(-5deg)
+    object-fit: cover;
 }
-label {
-    cursor: pointer;
-    font-size: 1em;
-    /* width: 100vw; */
-}
-
-#chooseFile1,
-#chooseFile2,
-#chooseFile3,
-#chooseFile4
- {
-    visibility: hidden;
-}
-
-.fileContainer {
+.f-title{
     display: flex;
     justify-content: center;
-    align-items: center;
+    color: var(--white);
+    font-size: 1rem;
+    /* margin: 15%; */
 }
-
-.fileInput {
+.input{
     display: flex;
-    align-items: center;
-    border-bottom: solid 2px black;
-    width: 60%;
-    height: 30px;
+    width: 30vw;
+    height: 65vh;
+    border-radius: 10px;
+    border: 0;
+    /* background-color: #ededed; */
+    padding: 5%;
+    background-image: url(../../image/paper.png);
+    box-shadow: 1px 3px 20px 1px rgba(175, 175, 175, 0.148);
+      
+    /* background-size: cover; */
+    resize: none;
+    outline: none;
+    font-size: 1rem;
 }
-
-#fileName {
-    margin-left: 5px;
+img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: brightness(160%) contrast(110%);
 }
-
-.buttonContainer {
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    background-color: black;
-    color: white;
-    border-radius: 30px;
-    padding: 10px;
-    font-size: 0.8em;
-
-    cursor: pointer;
-}
-
-.image-show {
+.haduri-logo{
     position: absolute;
-    z-index: -1;
+    height: 2.2%;
+    width: 24%;
+    background-image: url(../../image/haduri-logo.png);
+    background-size: cover;
+    z-index: 99;
+    left: 9%;
+    top: 5%;
+}
+.mp3{
+    width: 25%;
+    height: 25%;
+    background-image: url(../../image/song.png);
+    z-index: 99;
+    position: absolute;
+    transform: rotate(10deg);
+    object-fit: cover;
+    background-size: cover;
+}
+.song-box{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    width: 20%;
+    height: 20%;
+    transform: translate(-50%,-50%);
+    transform: rotate(3deg);
+
+    overflow: hidden;
+}
+.song{
+    /* transform: rotate(5deg); */
+    position: absolute;
+    white-space: nowrap;
+}
+#image-show1 label,
+#image-show2 label,
+#image-show3 label,
+#image-show4 label{
     display: flex;
+    color: #000000;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 100%;
+    cursor: pointer;
     height: 100%;
+    width: 100%;
+    font-size: 1rem;
 }
-
-.img {
+#image-show1 input[type="file"],
+#image-show2 input[type="file"],
+#image-show3 input[type="file"],
+#image-show4 input[type="file"] {
+    /* display: none; */
     position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
 }

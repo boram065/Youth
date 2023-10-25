@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 *{
-    font-family: 'Gowun Batang', serif;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
 :root {
@@ -11,7 +18,7 @@
     --white: #fff;
     --main-color: #DEA465;
 
-    --body-font:'Nanum Myeongjo', serif;
+    --body-font:'Pretendard-Regular';
     --h1-font-size: 2rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;

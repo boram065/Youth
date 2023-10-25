@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+}
+.main-container{
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+    height: 100vh;
+
+}
+.container2{
+    /* position: absolute; */
+    margin-top: 100vh;
+    background-image: url(../../image/image2.png);
+    height: 100vh;
+    background-size: cover;
+}
+.container3{
+    overflow: hidden;
+    height: 100vh;
+}
+.container4{
+    /* position: relative; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+}
+.container5{
+    height: 100vh;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+}
+h1{
+    color: #533422;
+    font-size: 2.8rem;
+}
+p{
+    color: #533422;
+    font-size: 1.5rem;
+}
+video{
+    min-width: 1920px;
+    min-height: 1080px;
+    /* position: relative; */
+}
+.logo{
+    position: absolute;
+    /* display: flex;
+    justify-content: center; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 30%;
+}h2{
+    position: absolute;
+    font-family: var(--body-font);
+    color: var(--white);
+    font-size: 3.2rem;
+    font-weight: bolder;
+}
+span{
+    color: var(--main-color);
+    font-family: var(--body-font);
+}
+.left{
+    padding: 7%;
+}
+.right{
+    right: 7%;
+    padding-top: 10%;
+    /* white-space: nowrap; */
+}
+.last-logo{
+    opacity: 0.6;
+    width: 70%;
+}
+.last-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.last-comment{
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 100;
+}
