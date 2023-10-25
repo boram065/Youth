@@ -29,3 +29,13 @@
     --font-regular: 400;
     --font-bold: 700;
 }
+
+
+textarea:focus::placeholder,
+input:focus::placeholder{
+    color: transparent;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
