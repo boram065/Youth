@@ -57,7 +57,7 @@ function replaceText() {
     text = text.replaceAll("아", "ㅇr");
     text = text.replaceAll("애", "0H");
     text = text.replaceAll("야", "○F");
-    text = text.replaceAll("어", "øł");
+    text = text.replaceAll("이", "øł");
     text = text.replaceAll("에", "øłl");
     text = text.replaceAll("여", "øㅕ");
     text = text.replaceAll("와", "오ŀ");
