@@ -1,31 +1,3 @@
-// var submit = document.getElementById('submitButton');
-// submit.onclick = showImage;     // Submit 버튼 클릭시 이미지 보여주기
-
-// function showImage() {
-//     var newImage = document.getElementById('image-show').lastElementChild;
-//     newImage.style.visibility = "visible";
-    
-//     document.getElementById('image-upload').style.visibility = 'hidden';
-
-//     document.getElementById('fileName').textContent = null;     // 기존 파일 이름 지우기
-// }
-
-// function loadFile(input) {
-//     var file = input.files[0];
-
-
-//     var newImage = new Image(); // 새 이미지 객체 생성
-//     newImage.onload = function() {
-//         var container = document.getElementById('image-show');
-//         container.innerHTML = ''; // 기존 이미지 삭제
-//         container.appendChild(newImage); // 새 이미지 추가
-//     };
-//     newImage.src = URL.createObjectURL(file);
-//     newImage.style.width = "70%";
-//     newImage.style.height = "70%";
-//     newImage.style.objectFit = "contain";
-// }
-
 function loadFile(input, imageShowId) {
     var file = input.files[0];
     var newImage = new Image(); // 새 이미지 객체 생성
@@ -39,3 +11,148 @@ function loadFile(input, imageShowId) {
     newImage.style.height = "70%";
     newImage.style.objectFit = "contain";
 }
+
+function replaceText() {
+    var textarea = document.getElementById('input');
+    var text = textarea.value;
+
+    text = text.replaceAll("가", "ㄱr");
+    text = text.replaceAll("거", "つㅓ");
+    text = text.replaceAll("게", "つㅓl");
+    text = text.replaceAll("고", "ヱ");
+    text = text.replaceAll("귀", "구l");
+    text = text.replaceAll("ュ", "그");
+    text = text.replaceAll("긔", "그i");
+    text = text.replaceAll("기", "ブl");
+    text = text.replaceAll("깨", "까l");
+    text = text.replaceAll("나", "ㄴr");
+    text = text.replaceAll("내", "Łй");
+    text = text.replaceAll("냐", "レF");
+    text = text.replaceAll("니", "LI");
+    text = text.replaceAll("다", "⊂ト");
+    text = text.replaceAll("당", "ㄷб");
+    text = text.replaceAll("대", "ㄷН");
+    text = text.replaceAll("댈", "달l");
+    text = text.replaceAll("더", "て┤");
+    text = text.replaceAll("때", "ㄸĦ");
+    text = text.replaceAll("라", "ㄹΓ");
+    text = text.replaceAll("랑", "己б");
+    text = text.replaceAll("래", "㉣łı");
+    text = text.replaceAll("랫", "랏l");
+    text = text.replaceAll("리", "己l");
+    text = text.replaceAll("마", "ㅁト");
+    text = text.replaceAll("만", "口ざ");
+    text = text.replaceAll("맘", "□占");
+    text = text.replaceAll("매", "□Й");
+    text = text.replaceAll("미", "ㅁı");
+    text = text.replaceAll("바", "ㅂΓ");
+    text = text.replaceAll("반", "ㅂĿ");
+    text = text.replaceAll("비", "㉥ㅣ");
+    text = text.replaceAll("사", "バr");
+    text = text.replaceAll("상", "バ6");
+    text = text.replaceAll("서", "nㅓ");
+    text = text.replaceAll("세", "パㅔ");
+    text = text.replaceAll("시", "んı");
+    text = text.replaceAll("싸", "ᄊト");
+    text = text.replaceAll("아", "ㅇr");
+    text = text.replaceAll("애", "0H");
+    text = text.replaceAll("야", "○F");
+    text = text.replaceAll("어", "øł");
+    text = text.replaceAll("에", "øłl");
+    text = text.replaceAll("여", "øㅕ");
+    text = text.replaceAll("와", "오ŀ");
+    text = text.replaceAll("위", "우ι");
+    text = text.replaceAll("의", "ºl");
+    text = text.replaceAll("이", "○l");
+    text = text.replaceAll("자", "ㅈΓ");
+    text = text.replaceAll("잠", "叉占");
+    text = text.replaceAll("장", "ㅈБ");
+    text = text.replaceAll("즤", "즈ı");
+    text = text.replaceAll("지", "ズl");
+    text = text.replaceAll("짜", "ㅉr");
+    text = text.replaceAll("차", "ㅊr");
+    text = text.replaceAll("참", "え占");
+    text = text.replaceAll("치", "ㅊł");
+    text = text.replaceAll("카", "ㅋΓ");
+    text = text.replaceAll("키", "ㅋı");
+    text = text.replaceAll("타", "ㅌŀ");
+    text = text.replaceAll("파", "ㅍr");
+    text = text.replaceAll("피", "ㅍı");
+    text = text.replaceAll("하", "㈛");
+    text = text.replaceAll("한", "ㅎŁ");
+    text = text.replaceAll("함", "ㅎ古");
+    text = text.replaceAll("항", "ㆅБ");
+    text = text.replaceAll("해", "ぁĦ");
+    text = text.replaceAll("히", "ぁı");
+    text = text.replaceAll("힝", "ㅎb");
+
+    textarea.value = text; // Set the updated text back to the textarea
+}
+
+function makeDraggable(div) {
+    let offsetX, offsetY, isDragging = false;
+
+    div.addEventListener("mousedown", function(event) {
+        isDragging = true;
+        offsetX = event.clientX - div.getBoundingClientRect().left;
+        offsetY = event.clientY - div.getBoundingClientRect().top;
+    });
+
+    document.addEventListener("mousemove", function(event) {
+        if (isDragging) {
+            const x = event.clientX - offsetX;
+            const y = event.clientY - offsetY;
+
+            // 부모 요소의 경계 내에 있는지 확인
+            const parentRect = div.parentElement.getBoundingClientRect();
+            const maxX = parentRect.width - div.offsetWidth;
+            const maxY = parentRect.height - div.offsetHeight;
+
+            // 이미지의 위치를 설정하되, 부모 요소의 경계를 넘어가지 않도록 제한
+            div.style.left = Math.min(maxX, Math.max(0, x)) + "px";
+            div.style.top = Math.min(maxY, Math.max(0, y)) + "px";
+        }
+    });
+
+    document.addEventListener("mouseup", function() {
+        isDragging = false;
+    });
+}
+
+// 각 이미지 컨테이너에 대해 드래그 핸들러 추가
+const imageContainers = document.querySelectorAll(".image-show img");
+imageContainers.forEach((container) => {
+    makeDraggable(container);
+});
+
+
+// function makeDraggable(div) {
+//     let offsetX, offsetY, isDragging = false;
+
+//     div.addEventListener("mousedown", function(event) {
+//         isDragging = true;
+//         offsetX = event.clientX - div.getBoundingClientRect().left;
+//         offsetY = event.clientY - div.getBoundingClientRect().top;
+//     });
+
+//     document.addEventListener("mousemove", function(event) {
+//         if (isDragging) {
+//             const x = event.clientX - offsetX;
+//             const y = event.clientY - offsetY;
+
+//             // 이미지의 위치를 설정
+//             div.style.left = x + "px";
+//             div.style.top = y + "px";
+//         }
+//     });
+
+//     document.addEventListener("mouseup", function() {
+//         isDragging = false;
+//     });
+// }
+
+// // 각 이미지 컨테이너에 대해 드래그 핸들러 추가
+// const imageContainers = document.querySelectorAll(".image-show");
+// imageContainers.forEach((container) => {
+//     makeDraggable(container);
+// });

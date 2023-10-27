@@ -41,10 +41,7 @@ body {
     border-radius: 10px;
     border: 0;
     /* background-color: #ededed; */
-    padding: 5%;
     background-image: url(../../image/paper.png);
-    box-shadow: 1px 3px 20px 1px rgba(175, 175, 175, 0.148);
-      
     /* background-size: cover; */
     resize: none;
     outline: none;
@@ -55,6 +52,34 @@ img{
     height: 100% !important;
     object-fit: cover !important;
     filter: brightness(160%) contrast(110%);
+}
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: fit-content;
+    column-gap: 3%;
+}
+.write{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../image/paper.png);
+    box-shadow: 1px 3px 20px 1px rgba(175, 175, 175, 0.148);
+    padding: 2%;
+    border-radius: 10px;
+    align-items: flex-end;
+    width: 30vw;
+}
+.upload,
+.replace{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    border: 0;
+    padding: 2% 3%;
+    border-radius: 5px;
 }
 .haduri-logo{
     position: absolute;
