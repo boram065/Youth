@@ -1,0 +1,162 @@
+body {
+    width: 100vw;
+    height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+.frame {
+    
+	transform: rotate(-5deg);
+    /* position: absolute; */
+	width: 250px;
+	background-color: #000000;
+	height: 76%;
+}
+.photos {
+	margin-top: 10%;
+    /* margin-bottom: 10% ; */
+    height: 86%;
+}
+.photo-frame {
+    position: relative;
+	background-color: white;
+	/* margin: 5% 6%; */
+	height: 100%;
+    /* background-size: cover; */
+    /* object-fit: cover; */
+}
+
+.image-div{
+    position: relative;
+	background-color: white;
+	margin: 5% 6%;
+	height: 23%;
+    /* background-size: cover; */
+    /* object-fit: cover; */
+}
+.f-title{
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1rem;
+    /* margin: 15%; */
+}
+.input{
+    display: flex;
+    width: 30vw;
+    height: 65vh;
+    border-radius: 10px;
+    border: 0;
+    /* background-color: #ededed; */
+    background-image: url(../../image/paper.png);
+    /* background-size: cover; */
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+}
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: fit-content;
+    column-gap: 3%;
+}
+.write{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../image/paper.png);
+    box-shadow: 1px 3px 20px 1px rgba(175, 175, 175, 0.148);
+    padding: 2%;
+    border-radius: 10px;
+    align-items: flex-end;
+    width: 30vw;
+}
+img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: sepia(90%) grayscale(10%) contrast(70%);
+    z-index: 100;
+    pointer-events: none;
+    transition: opacity .2s cubic-bezier(.445, .05, .55, .95); 
+    visibility: visible;
+}
+/* .noise {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+    background-image: url('../../image/retro-film.png');
+    background-position: 0 0;
+    background-size: auto;
+    pointer-events: none;
+    opacity: 0.11;
+    transition: opacity .2s cubic-bezier(.445, .05, .55, .95); 
+    visibility: visible;
+} */
+.mp3{
+    width: 25%;
+    height: 25%;
+    background-image: url(../../image/song.png);
+    z-index: 99;
+    position: absolute;
+    transform: rotate(10deg);
+    object-fit: cover;
+    background-size: cover;
+}
+.song-box{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    width: 20%;
+    height: 20%;
+    transform: translate(-50%,-50%);
+    transform: rotate(3deg);
+
+    overflow: hidden;
+}
+.song{
+    /* transform: rotate(5deg); */
+    position: absolute;
+    white-space: nowrap;
+}
+.upload,
+.replace{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    border: 0;
+    padding: 2% 3%;
+    border-radius: 5px;
+}
+#image-show1 label,
+#image-show2 label,
+#image-show3 label,
+#image-show4 label{
+    display: flex;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+}
+#image-show1 input[type="file"],
+#image-show2 input[type="file"],
+#image-show3 input[type="file"],
+#image-show4 input[type="file"] {
+    /* display: none; */
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
