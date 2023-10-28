@@ -22,10 +22,19 @@ body {
 .photo-frame {
     position: relative;
 	background-color: white;
+	/* margin: 5% 6%; */
+	height: 100%;
+    /* background-size: cover; */
+    /* object-fit: cover; */
+}
+
+.image-div{
+    position: relative;
+	background-color: white;
 	margin: 5% 6%;
 	height: 23%;
-    background-size: cover;
-    object-fit: cover;
+    /* background-size: cover; */
+    /* object-fit: cover; */
 }
 .f-title{
     display: flex;
@@ -47,12 +56,6 @@ body {
     outline: none;
     font-size: 1rem;
 }
-img{
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    filter: brightness(160%) contrast(110%);
-}
 .btn-container{
     display: flex;
     justify-content: flex-end;
@@ -70,27 +73,31 @@ img{
     align-items: flex-end;
     width: 30vw;
 }
-.upload,
-.replace{
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2vw;
-    border: 0;
-    padding: 2% 3%;
-    border-radius: 5px;
+img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: sepia(90%) grayscale(10%) contrast(70%);
+    z-index: 100;
+    pointer-events: none;
+    transition: opacity .2s cubic-bezier(.445, .05, .55, .95); 
+    visibility: visible;
 }
-.haduri-logo{
-    position: absolute;
-    height: 2.2%;
-    width: 24%;
-    background-image: url(../../image/haduri-logo.png);
-    background-size: cover;
-    z-index: 99;
-    left: 9%;
-    top: 5%;
-}
+/* .noise {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+    background-image: url('../../image/retro-film.png');
+    background-position: 0 0;
+    background-size: auto;
+    pointer-events: none;
+    opacity: 0.11;
+    transition: opacity .2s cubic-bezier(.445, .05, .55, .95); 
+    visibility: visible;
+} */
 .mp3{
     width: 25%;
     height: 25%;
@@ -116,6 +123,17 @@ img{
     /* transform: rotate(5deg); */
     position: absolute;
     white-space: nowrap;
+}
+.upload,
+.replace{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    border: 0;
+    padding: 2% 3%;
+    border-radius: 5px;
 }
 #image-show1 label,
 #image-show2 label,

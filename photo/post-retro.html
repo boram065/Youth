@@ -5,8 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youth</title>
+    <link rel="stylesheet" href="./css/post-retro.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    
+    <header>
+        <nav class="nav container">
+
+            <p><a href="" class="moblie-title">Youth</a></p>
+            
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../main/main.html" class="nav-link">Youth</a></li>
+                <li class="nav-item"><a href="../photo/index.html" class="nav-link">Photo</a></li>
+                <li class="nav-item"><a href="" class="nav-link">song</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Gallery</a></li>
+            </ul>
+
+            <div class="nav-toggle" id="nav_toggle">
+                <i class="bi bi-list"></i>
+            </div>
+
+        </nav>
+    </header>
+    <section class="frame">
+        <div class="photos">
+            <div class="image-div">
+                <div id="image-show1" class="photo-frame image-show">
+                    <input type="file" id="chooseFile1" name="chooseFile1" accept="image/*" onchange="loadFile(this, 'image-show1')">
+                    <label for="chooseFile1">이미지 업로드</label> 
+                </div>
+            </div>
+            <div class="image-div">
+                <div id="image-show2" class="photo-frame image-show">
+                    <input type="file" id="chooseFile2" name="chooseFile2" accept="image/*" onchange="loadFile(this, 'image-show2')">
+                    <label for="chooseFile2">이미지 업로드</label> 
+                    <!-- <img id="image2" class="uploaded-image" src="" alt="Uploaded Image"> -->
+                </div>
+            </div>
+            <div class="image-div">
+                <div id="image-show3" class="photo-frame image-show">
+                    <input type="file" id="chooseFile3" name="chooseFile3" accept="image/*" onchange="loadFile(this, 'image-show3')">
+                    <label for="chooseFile3">이미지 업로드</label> 
+                    <!-- <img id="image3" class="uploaded-image" src="" alt="Uploaded Image"> -->
+                </div>
+            </div>
+            <div class="image-div">
+                <div id="image-show4" class="photo-frame image-show">
+                    <input type="file" id="chooseFile4" name="chooseFile4" accept="image/*" onchange="loadFile(this, 'image-show4')">
+                    <label for="chooseFile4">이미지 업로드</label> 
+                    <!-- <img id="image4" class="uploaded-image" src="" alt="Uploaded Image"> -->
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="f-title">Youth</p>
+        </div>
+    </section>
+    <section class="write">
+        <textarea name="input" class="input" id="input" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
+        <div class="btn-container">
+            <button class="replace" onclick="replaceText()">글씨체 미리보기</button>
+            <button class="upload" onclick="">업로드</button>
+        </div>
+    </section>
+    <section class="song-container">
+        <!-- <img src="../image/song.png" alt="mp3" class="mp3"> -->
+        <div class="mp3">
+            <div class="song-box"><p class="song" id="song">♬ 박보람 - 혜화동(혹은 쌍문동) ♬</p></div>
+        </div>
+    </section>
+    <script src="./js/post.js"></script>
 </body>
+
 </html>
