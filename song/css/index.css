@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+}
+
+.searchView {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    margin-top: 70px;
+    margin-left: 130px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.input {
+    width: 35vw;
+    height: 5vh;
+    padding-left: 35px;
+    box-shadow: 5px;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    color: #D1D1D1;
+    outline: none; 
+}
+
+.input:focus {
+    color: #000;
+  }
+
+.bi-search {
+    position: absolute;
+    margin-left: 10px;
+    color: #D1D1D1;
+    font-size: 0.9rem;
+}
+
+.viewContainer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.scrollable-view {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.view {
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    height: 7vh;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    box-shadow: 5px;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    font-size: 1rem;
+}
+
+.tape {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    float: right;
+    margin-top: -420px;
+    margin-right: 70px;
+}
+
+.tape img {
+    width: 40vw;
+    height: 55vh;
+}
+
+.songTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 40px;
+    font-size: 1rem;
+}
