@@ -1,19 +1,30 @@
 body {
     margin: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.searchView {
+main{
     display: flex;
-    flex-direction: column;
-    row-gap: 60px;
-    margin-top: 70px;
-    margin-left: 130px;
+    height: 100%;
+    justify-content: center;
+}
+
+.song-container {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    justify-content: space-between;
+    /* margin-top: 70px;
+    margin-left: 130px; */
 }
 
 .search {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     column-gap: 20px;
+    width: 32vw;
 }
 
 .input {
@@ -39,12 +50,20 @@ body {
     font-size: 0.9rem;
     cursor: pointer;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    row-gap: 5%;
+}
 
 .viewContainer {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     max-height: 60vh;
+    width: fit-content;
 }
 
 .scrollable-view {
@@ -55,8 +74,8 @@ body {
 .view {
     display: flex;
     align-items: center;
-    width: 35vw;
     height: 7vh;
+    width: 30vw;
     padding-left: 35px;
     margin-bottom: 10px;
     box-shadow: 5px;
@@ -71,8 +90,8 @@ body {
     justify-content: center;
     align-items: flex-start;
     float: right;
-    margin-top: -420px;
-    margin-right: 70px;
+    /* margin-top: -420px;
+    margin-right: 70px; */
 }
 
 .tape img {
@@ -85,7 +104,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-top: 40px;
+    top: 38%;
     font-size: 1rem;
 }
 
@@ -94,18 +113,13 @@ body {
 }
 
 @media screen and (max-width: 540px) {
-    .container {
+    .song-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        row-gap: 40px;
-    }
-
-    .searchView {
-        margin-top: 50px;
+        /* margin-top: 50px; */
         margin-left: 0;
-        row-gap: 300px;
+        gap: 5%;
+        /* row-gap: 300px; */
     }
 
     .input, .view {
@@ -118,7 +132,7 @@ body {
 
     .tape { 
         margin-right: 0;
-        margin-top: -550px;
+        /* margin-top: -550px; */
     }
 
     .tape img {
@@ -127,7 +141,11 @@ body {
     }
 
     .songTitle {
-        margin-top: 25px;
+        top: 25%;
         font-size: 0.8rem;
+    }
+
+    .search{
+        width: 75vw;
     }
 }
