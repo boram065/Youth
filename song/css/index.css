@@ -25,6 +25,7 @@ body {
     border: 1px solid #D1D1D1;
     color: #D1D1D1;
     outline: none; 
+    cursor: pointer;
 }
 
 .input:focus {
@@ -36,6 +37,7 @@ body {
     margin-left: 10px;
     color: #D1D1D1;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .viewContainer {
@@ -55,12 +57,13 @@ body {
     align-items: center;
     width: 35vw;
     height: 7vh;
-    padding-left: 15px;
+    padding-left: 35px;
     margin-bottom: 10px;
     box-shadow: 5px;
     border-radius: 10px;
     border: 1px solid #D1D1D1;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .tape {
@@ -84,4 +87,47 @@ body {
     position: absolute;
     margin-top: 40px;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+    
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 40px;
+    }
+
+    .searchView {
+        margin-top: 50px;
+        margin-left: 0;
+        row-gap: 300px;
+    }
+
+    .input, .view {
+        width: 62vw;
+    }
+
+    .viewContainer {
+        max-height: 35vh;
+    }
+
+    .tape { 
+        margin-right: 0;
+        margin-top: -550px;
+    }
+
+    .tape img {
+         width: 70vw;
+         height: 40vh;
+    }
+
+    .songTitle {
+        margin-top: 25px;
+        font-size: 0.8rem;
+    }
 }
