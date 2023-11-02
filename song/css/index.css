@@ -24,7 +24,7 @@ main{
     align-items: center;
     justify-content: flex-start;
     column-gap: 20px;
-    width: 32vw;
+    width: 32.5vw;
 }
 
 .input {
@@ -109,21 +109,26 @@ main{
 }
 
 @media screen and (max-width: 720px) {
-    
-}
-
-@media screen and (max-width: 540px) {
     .song-container {
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        /* margin-top: 50px; */
         margin-left: 0;
         gap: 5%;
-        /* row-gap: 300px; */
     }
 
-    .input, .view {
-        width: 62vw;
+    .search {
+        margin-right: 65px;
+        width: 60vw;
+    }
+
+    .input {
+        width: 100%;
+    }
+    
+    .view {
+        width: 55vw;
     }
 
     .viewContainer { 
@@ -132,20 +137,34 @@ main{
 
     .tape { 
         margin-right: 0;
-        /* margin-top: -550px; */
     }
 
     .tape img {
-         width: 70vw;
-         height: 40vh;
+        width: 60vw;
+        height: 40vh;
     }
 
     .songTitle {
         top: 25%;
         font-size: 0.8rem;
     }
+}
 
-    .search{
-        width: 75vw;
+@media screen and (max-width: 540px) {
+    .search {
+        width: 70vw;
+        margin-right: 25px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .view {
+        width: 65vw;
+    }
+
+    .tape img {
+        width: 70vw;
     }
 }
