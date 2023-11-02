@@ -86,9 +86,62 @@ function replaceText() {
     text = text.replaceAll("히", "ぁı");
     text = text.replaceAll("힝", "ㅎb");
 
-    textarea.value = text; // Set the updated text back to the textarea
+    textarea.value = text;
 }
 
+
+var songIndex = 0; // 현재 재생 중인 노래의 인덱스
+var isPlaying = false; // 노래가 재생 중인지 여부를 나타내는 변수
+var audio = new Audio(); // 오디오 요소 생성
+
+var songTitleDiv = document.querySelector('.song-title .title');
+var playBtn = document.getElementById('playBtn');
+var nextBtn = document.getElementById('nextBtn');
+var backBtn = document.querySelector('.backBtn');
+var progressBar = document.querySelector('.element');
+
+function playSong(index) {
+    var selectedSong = song[index];
+    if (selectedSong) {
+        songTitleDiv.textContent = selectedSong.title;
+        audio.src = selectedSong.song;
+        audio.play();
+        isPlaying = true;
+    }
+}
+
+function nextSong() {
+    songIndex = Math.floor(Math.random() * song.length);
+    playSong(songIndex);
+}
+
+function playPause() {
+    if (isPlaying) {
+        audio.pause();
+    } else {
+        audio.play();
+    }
+    isPlaying = !isPlaying;
+}
+
+function backSong() {
+    songIndex = (songIndex - 1 + song.length) % song.length;
+    playSong(songIndex);
+}
+
+// Play 버튼 클릭 시 재생/일시정지 토글
+playBtn.addEventListener('click', playPause);
+
+// Next 버튼 클릭 시 다음 노래 재생
+nextBtn.addEventListener('click', nextSong);
+
+// Back 버튼 클릭 시 이전 노래 재생
+backBtn.addEventListener('click', backSong);
+
+
+
+
+// 실행 안됨. 시간 나면 수정해보기
 function makeDraggable(div) {
     let offsetX, offsetY, isDragging = false;
 
@@ -124,35 +177,7 @@ const imageContainers = document.querySelectorAll(".image-show img");
 imageContainers.forEach((container) => {
     makeDraggable(container);
 });
-
-
-// function makeDraggable(div) {
-//     let offsetX, offsetY, isDragging = false;
-
-//     div.addEventListener("mousedown", function(event) {
-//         isDragging = true;
-//         offsetX = event.clientX - div.getBoundingClientRect().left;
-//         offsetY = event.clientY - div.getBoundingClientRect().top;
-//     });
-
-//     document.addEventListener("mousemove", function(event) {
-//         if (isDragging) {
-//             const x = event.clientX - offsetX;
-//             const y = event.clientY - offsetY;
-
-//             // 이미지의 위치를 설정
-//             div.style.left = x + "px";
-//             div.style.top = y + "px";
-//         }
-//     });
-
-//     document.addEventListener("mouseup", function() {
-//         isDragging = false;
-//     });
-// }
-
-// // 각 이미지 컨테이너에 대해 드래그 핸들러 추가
-// const imageContainers = document.querySelectorAll(".image-show");
-// imageContainers.forEach((container) => {
-//     makeDraggable(container);
-// });
+audio.addEventListener('timeupdate', function() {
+    var progress = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = progress + '%';
+});
