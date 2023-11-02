@@ -8,7 +8,7 @@ for (var i = 0; i < song.length; i++) {
   var songPath = song[i].song;
   var audio = new Audio(songPath);
   var titleDiv = document.createElement("div");
-  titleDiv.textContent = songTitle;
+  titleDiv.textContent = songTitle.replace(/♬/g, '');
   titleDiv.classList.add("view");
 
   titleDiv.addEventListener("click", (function (audio, titleDiv, songTitle) {
