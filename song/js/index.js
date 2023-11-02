@@ -24,3 +24,41 @@ for (var i = 0; i < song.length; i++) {
   
   viewContainer.appendChild(titleDiv);
 }
+
+var searchInput = document.querySelector('.search .input');
+searchInput.addEventListener('input', function() {
+    var searchTerm = searchInput.value.toLowerCase();
+    var filteredSongs;
+
+    if (searchTerm === '') {
+        filteredSongs = song;
+    } else {
+        filteredSongs = song.filter(function(item) {
+            return item.title.toLowerCase().includes(searchTerm);
+        });
+    }
+
+    renderFilteredSongs(filteredSongs);
+});
+
+function renderFilteredSongs(filteredSongs) {
+    viewContainer.innerHTML = '';
+
+    filteredSongs.forEach(function(item) {
+        var songDiv = document.createElement('div');
+        songDiv.textContent = item.title.replace(/♬/g, '');
+        songDiv.classList.add('view');
+
+        songDiv.addEventListener('click', function() {
+            if (currentAudio) {
+                currentAudio.pause();
+            }
+            var audio = new Audio(item.song);
+            audio.play();
+            currentAudio = audio;
+            songTitleDiv.textContent = item.title;
+        });
+
+        viewContainer.appendChild(songDiv);
+    });
+}
