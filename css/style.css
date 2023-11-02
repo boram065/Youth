@@ -18,6 +18,7 @@
     --white: #fff;
     --main-color: #DEA465;
     --gray400: #E7E7E7;
+    --gray900: #bdbdbd;
 
     --body-font:'Pretendard-Regular';
     --h1-font-size: 2rem;
@@ -35,6 +36,11 @@
 textarea:focus::placeholder,
 input:focus::placeholder{
     color: transparent;
+}
+
+textarea::placeholder,
+input::placeholder{
+    color: var(--gray900);
 }
 
 ::-webkit-scrollbar{
