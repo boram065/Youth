@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/post-retro.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/nav.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -31,52 +31,54 @@
     </header>
     <section class="frame">
         <div class="photos">
-            <div class="image-div">
-                <div id="image-show1" class="photo-frame image-show">
-                    <input type="file" id="chooseFile1" name="chooseFile1" accept="image/*" onchange="loadFile(this, 'image-show1')">
-                    <label for="chooseFile1">이미지 업로드</label> 
-                </div>
+            <div id="image-show1" class="photo-frame image-show">
+                <input type="file" id="chooseFile1" name="chooseFile1" accept="image/*" onchange="loadFile(this, 'image-show1')">
+                <label for="chooseFile1">이미지 업로드</label>
             </div>
-            <div class="image-div">
-                <div id="image-show2" class="photo-frame image-show">
-                    <input type="file" id="chooseFile2" name="chooseFile2" accept="image/*" onchange="loadFile(this, 'image-show2')">
-                    <label for="chooseFile2">이미지 업로드</label> 
-                    <!-- <img id="image2" class="uploaded-image" src="" alt="Uploaded Image"> -->
-                </div>
+            <div id="image-show2" class="photo-frame image-show">
+                <input type="file" id="chooseFile2" name="chooseFile2" accept="image/*" onchange="loadFile(this, 'image-show2')">
+                <label for="chooseFile2">이미지 업로드</label> 
             </div>
-            <div class="image-div">
-                <div id="image-show3" class="photo-frame image-show">
-                    <input type="file" id="chooseFile3" name="chooseFile3" accept="image/*" onchange="loadFile(this, 'image-show3')">
-                    <label for="chooseFile3">이미지 업로드</label> 
-                    <!-- <img id="image3" class="uploaded-image" src="" alt="Uploaded Image"> -->
-                </div>
+            <div id="image-show3" class="photo-frame image-show">
+                <input type="file" id="chooseFile3" name="chooseFile3" accept="image/*" onchange="loadFile(this, 'image-show3')">
+                <label for="chooseFile3">이미지 업로드</label> 
             </div>
-            <div class="image-div">
-                <div id="image-show4" class="photo-frame image-show">
-                    <input type="file" id="chooseFile4" name="chooseFile4" accept="image/*" onchange="loadFile(this, 'image-show4')">
-                    <label for="chooseFile4">이미지 업로드</label> 
-                    <!-- <img id="image4" class="uploaded-image" src="" alt="Uploaded Image"> -->
-                </div>
+            <div id="image-show4" class="photo-frame image-show">
+                <input type="file" id="chooseFile4" name="chooseFile4" accept="image/*" onchange="loadFile(this, 'image-show4')">
+                <label for="chooseFile4">이미지 업로드</label> 
             </div>
         </div>
+        
         <div class="footer">
             <p class="f-title">Youth</p>
         </div>
     </section>
-    <section class="write">
-        <textarea name="input" class="input" id="input" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
-        <div class="btn-container">
-            <button class="replace" onclick="replaceText()">글씨체 미리보기</button>
-            <button class="upload" onclick="">업로드</button>
+
+    <section class="write-container">
+        <div class="write">
+            <textarea name="input" class="input" id="input" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
+            <div class="btn-container">
+                <button class="replace" onclick="replaceText()">글씨체 미리보기</button>
+                <button class="upload" onclick="">업로드</button>
+            </div>
         </div>
-    </section>
-    <section class="song-container">
-        <!-- <img src="../image/song.png" alt="mp3" class="mp3"> -->
-        <div class="mp3">
-            <div class="song-box"><p class="song" id="song">♬ 박보람 - 혜화동(혹은 쌍문동) ♬</p></div>
+        <div class="song-container">
+            <div class="song-title">
+                <div class="title"></div>
+            </div>
+            <div class="line">
+                <div class="playline">
+                    <div class="element"></div>
+                </div>
+            </div>
+            <div class="play">
+                <button class="backBtn"><i class='bx bx-skip-previous' ></i></button>
+                <button id="playBtn" class="playBtn"><i class='bx bx-play'></i></button>
+                <button id="nextBtn" class="nextBtn"><i class='bx bx-skip-next'></i></button>
+            </div>
         </div>
     </section>
     <script src="./js/post.js"></script>
+    <script src="../song/js/song.js"></script>
 </body>
-
 </html>

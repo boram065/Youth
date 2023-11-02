@@ -118,8 +118,10 @@ function nextSong() {
 function playPause() {
     if (isPlaying) {
         audio.pause();
+        songTitleDiv.style.animationPlayState = 'paused'; 
     } else {
         audio.play();
+        songTitleDiv.style.animationPlayState = 'running'
     }
     isPlaying = !isPlaying;
 }
