@@ -37,7 +37,7 @@ body {
 .input{
     display: flex;
     width: 30vw;
-    height: 65vh;
+    height: 45vh;
     border-radius: 10px;
     border: 0;
     /* background-color: #ededed; */
@@ -46,6 +46,9 @@ body {
     resize: none;
     outline: none;
     font-size: 1rem;
+}
+input{
+    outline: none;
 }
 img{
     width: 100% !important;
@@ -58,7 +61,7 @@ img{
     justify-content: flex-end;
     width: 100%;
     height: fit-content;
-    column-gap: 3%;
+    column-gap: 1%;
 }
 .write{
     display: flex;
@@ -80,6 +83,8 @@ img{
     border: 0;
     padding: 2% 3%;
     border-radius: 5px;
+    margin-bottom: 2%;
+    margin-right: 2%;
 }
 .haduri-logo{
     position: absolute;
@@ -91,15 +96,80 @@ img{
     left: 9%;
     top: 5%;
 }
-.mp3{
-    width: 25%;
-    height: 25%;
-    background-image: url(../../image/song.png);
-    z-index: 99;
-    position: absolute;
-    transform: rotate(10deg);
-    object-fit: cover;
-    background-size: cover;
+.write-container{
+    display: flex;
+    flex-direction: column;
+}
+.song-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 15vh;
+    margin-top: 5%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid var(--gray400);
+}
+.song-title {
+    width: 70%;
+    height: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.title {
+    margin-top: 1vw;
+    display: inline-block;
+    animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(21vw);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.playline{
+    width: 23vw;
+    height: 0.28vw;
+    margin-top: 1.4vw;
+    background-color: #E3E3E3;
+    border-radius: 50px;
+}
+.element {
+    width: 0vw;
+    height: 0.28vw;
+    margin-top: 1.4vw;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    animation: lineMove 2s linear forwards;
+    animation-name: lineMove;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.play{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-top: 1vw;
+    grid-column-gap: 5vw;
+}
+.backBtn,
+.nextBtn,
+.playBtn{
+    background: none;
+    border: none;
+    width: 3.6vw;
+    height: 2.2vw;
+    color: var(--main-color);
+    font-size: 1.5rem;
 }
 .song-box{
     position: absolute;
