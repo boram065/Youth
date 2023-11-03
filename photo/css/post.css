@@ -85,6 +85,7 @@ img{
     border-radius: 5px;
     margin-bottom: 2%;
     margin-right: 2%;
+    cursor: pointer;
 }
 .haduri-logo{
     position: absolute;
@@ -170,6 +171,7 @@ img{
     height: 2.2vw;
     color: var(--main-color);
     font-size: 1.5rem;
+    cursor: pointer;
 }
 .song-box{
     position: absolute;
