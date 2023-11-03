@@ -24,7 +24,7 @@ main{
     align-items: center;
     justify-content: flex-start;
     column-gap: 20px;
-    width: 32.5vw;
+    width: 40%;
 }
 
 .input {
@@ -34,7 +34,7 @@ main{
     box-shadow: 5px;
     border-radius: 10px;
     border: 1px solid #D1D1D1;
-    color: #D1D1D1;
+    /* color: #D1D1D1; */
     outline: none; 
     cursor: pointer;
 }
@@ -62,7 +62,7 @@ main{
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    max-height: 60vh;
+    height: 60vh;
     width: fit-content;
 }
 
@@ -80,9 +80,10 @@ main{
     margin-bottom: 10px;
     box-shadow: 5px;
     border-radius: 10px;
-    border: 1px solid #D1D1D1;
+    /* border: 1px solid #D1D1D1; */
     font-size: 1rem;
     cursor: pointer;
+    border: #D1D1D1 1px solid;
 }
 
 .tape {
@@ -99,13 +100,26 @@ main{
     height: 55vh;
 }
 
-.songTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.title-container {
     position: absolute;
+    width: 15%;
+    overflow: hidden;
+    top: 37%;
+}
+.songTitle {
+    display: inline-block;
+    white-space: nowrap;
     top: 38%;
     font-size: 1rem;
+    animation: marquee 8s linear infinite;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(21vw);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -144,8 +158,8 @@ main{
         height: 40vh;
     }
 
-    .songTitle {
-        top: 25%;
+    .title-container {
+        top: 24.2%;
         font-size: 0.8rem;
     }
 }
