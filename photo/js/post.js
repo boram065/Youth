@@ -117,15 +117,18 @@ function nextSong() {
     songIndex = Math.floor(Math.random() * song.length);
     playSong(songIndex);
     songTitleDiv.style.animationPlayState = 'running'
+    playBtn.innerHTML = '<i class="bx bx-pause"></i>'; // 일시 정지 아이콘으로 변경
 }
 
 function playPause() {
     if (isPlaying) {
         audio.pause();
-        songTitleDiv.style.animationPlayState = 'paused'; 
+        songTitleDiv.style.animationPlayState = 'paused';
+        playBtn.innerHTML = '<i class="bx bx-play"></i>'
     } else {
         audio.play();
         songTitleDiv.style.animationPlayState = 'running'
+        playBtn.innerHTML = '<i class="bx bx-pause"></i>';
     }
     isPlaying = !isPlaying;
 }
@@ -133,8 +136,8 @@ function playPause() {
 function backSong() {
     songIndex = (songIndex - 1 + song.length) % song.length;
     playSong(songIndex);
-    
     songTitleDiv.style.animationPlayState = 'running'
+    playBtn.innerHTML = '<i class="bx bx-pause"></i>';
 }
 
 // Play 버튼 클릭 시 재생/일시정지 토글
