@@ -1,10 +1,10 @@
 function loadFile(input, imageShowId) {
     var file = input.files[0];
-    var newImage = new Image(); // 새 이미지 객체 생성
+    var newImage = new Image();
     newImage.onload = function() {
         var container = document.getElementById(imageShowId);
-        container.innerHTML = ''; // 기존 이미지 삭제
-        container.appendChild(newImage); // 새 이미지 추가
+        container.innerHTML = '';
+        container.appendChild(newImage);
     };
     newImage.src = URL.createObjectURL(file);
     newImage.style.width = "70%";
@@ -100,6 +100,9 @@ var nextBtn = document.getElementById('nextBtn');
 var backBtn = document.querySelector('.backBtn');
 var progressBar = document.querySelector('.element');
 
+
+songTitleDiv.style.animationPlayState = 'paused'; 
+
 function playSong(index) {
     var selectedSong = song[index];
     if (selectedSong) {
@@ -113,6 +116,7 @@ function playSong(index) {
 function nextSong() {
     songIndex = Math.floor(Math.random() * song.length);
     playSong(songIndex);
+    songTitleDiv.style.animationPlayState = 'running'
 }
 
 function playPause() {
@@ -129,6 +133,8 @@ function playPause() {
 function backSong() {
     songIndex = (songIndex - 1 + song.length) % song.length;
     playSong(songIndex);
+    
+    songTitleDiv.style.animationPlayState = 'running'
 }
 
 // Play 버튼 클릭 시 재생/일시정지 토글
@@ -183,3 +189,36 @@ audio.addEventListener('timeupdate', function() {
     var progress = (audio.currentTime / audio.duration) * 100;
     progressBar.style.width = progress + '%';
 });
+const playline = document.querySelector('.playline');
+const element = document.querySelector('.element');
+
+
+// // 노래가 로딩될 때마다 이벤트가 발생합니다.
+// audio.addEventListener('loadeddata', function() {
+//     const songLengthInSeconds = audio.duration; // 노래의 총 길이(초)를 가져옵니다.
+
+//     function moveElement() {
+//         const currentTime = audio.currentTime; // 현재 재생 중인 노래의 시간(초)을 가져옵니다.
+//         const percentage = (currentTime / songLengthInSeconds) * 100;
+//         playline.style.width = percentage + '%';
+//         element.style.left = percentage + '%';
+//     }
+
+//     // 매초마다 moveElement 함수를 호출하여 playline과 element를 업데이트합니다.
+//     setInterval(moveElement, 1000); // 1초마다 업데이트 (1000밀리초 = 1초)
+
+//     // 노래를 재생합니다.
+//     audio.play();
+
+//     // element를 클릭했을 때 노래의 재생 위치를 조절하고 playline과 element를 함께 움직입니다.
+//     element.addEventListener('click', function(event) {
+//         const clickX = event.clientX - playline.getBoundingClientRect().left;
+//         const percentage = (clickX / playline.offsetWidth) * 100;
+//         const newTime = (percentage / 100) * songLengthInSeconds;
+//         audio.currentTime = newTime; // 노래의 재생 위치를 조절합니다.
+
+//         // playline과 element를 클릭한 위치에 맞게 업데이트합니다.
+//         playline.style.width = percentage + '%';
+//         element.style.left = percentage + '%';
+//     });
+// });
