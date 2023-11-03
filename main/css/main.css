@@ -39,7 +39,7 @@ h1{
 }
 p{
     color: #533422;
-    font-size: 1.5rem;
+    font-size: var(--h2-font-size);
 }
 video{
     min-width: 1920px;
@@ -55,7 +55,8 @@ video{
     transform: translate(-50%,-50%);
     text-align: center;
     width: 30%;
-}h2{
+}
+h2{
     position: absolute;
     font-family: var(--body-font);
     color: var(--white);
@@ -86,6 +87,56 @@ span{
 }
 .last-comment{
     color: var(--white);
-    font-size: 1rem;
+    font-size: var(--normal-font-size);
     font-weight: 100;
+}
+
+@media screen and (max-width: 720px){
+    .logo {
+        width: 40%;
+    }
+
+    .left, .right {
+        font-size: var(--h1-font-size);
+    }
+
+    .container4 h1 {
+        font-size: 1.4rem;
+    }
+
+    .container4 p {
+        font-size: var(--normal-font-size);
+    }
+
+    .last-box img {
+        width: 40%;
+    }
+
+    .last-box p {
+        font-size: var(--small-font-size);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .left {
+        position: relative;
+        writing-mode: vertical-lr;
+        float: right;
+        font-size: 1.8rem;
+        top: 5%;
+    }
+
+    .container4 {
+        text-align: center;
+        margin-left: 25%;
+        width: 50vw;
+    }
+
+    .container4 p {
+        font-size: var(--small-font-size);
+    }
+
+    .last-box p {
+        font-size: var(--smaller-font-size);
+    }
 }
