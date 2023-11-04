@@ -1,5 +1,6 @@
 var viewContainer = document.querySelector(".scrollable-view");
 var songTitleDiv = document.querySelector(".songTitle p");
+var view = document.getElementsByClassName("view");
 var currentAudio = null;
 
 // 모든 노래의 제목을 viewContainer에 추가
@@ -69,4 +70,51 @@ function renderFilteredSongs(filteredSongs) {
 
         viewContainer.appendChild(songDiv);
     });
+}
+
+// 노래가 끝나면 자동으로 다음 노래로 넘어가기
+var currentSongIndex = 0;
+function playNextSong() {
+    if (currentAudio) {
+        currentAudio.pause();
+    }
+
+    if (currentSongIndex < song.length) {
+        var songTitle = song[currentSongIndex].title;
+        var songPath = song[currentSongIndex].song;
+        var audio = new Audio(songPath);
+
+        audio.addEventListener("ended", function () {
+            currentSongIndex++; // 다음 노래 인덱스로 이동
+            if (currentSongIndex < song.length) {
+                var nextSongTitle = song[currentSongIndex].title;
+                var nextSongPath = song[currentSongIndex].song;
+
+                audio.src = nextSongPath;
+                audio.load();
+                audio.play();
+                songTitleDiv.textContent = nextSongTitle;
+                currentAudio = audio;
+            }
+        });
+
+        audio.play();
+        currentAudio = audio;
+        songTitleDiv.textContent = songTitle;
+    }
+}
+
+for (var i = 0; i < view.length; i++) {
+  view[i].addEventListener("click", function (event) {
+    // 클릭한 노래의 인덱스를 찾기
+    var clickedTitle = event.target.textContent;
+    var clickedIndex = song.findIndex(function (item) {
+      return item.title.replace(/♬/g, '') === clickedTitle;
+    });
+
+    if (clickedIndex !== -1) {
+      currentSongIndex = clickedIndex;
+      playNextSong();
+    }
+  });
 }
