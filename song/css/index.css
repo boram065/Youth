@@ -15,8 +15,6 @@ main{
     align-items: center;
     width: 80vw;
     justify-content: space-between;
-    /* margin-top: 70px;
-    margin-left: 130px; */
 }
 
 .search {
@@ -34,7 +32,6 @@ main{
     box-shadow: 5px;
     border-radius: 10px;
     border: 1px solid #D1D1D1;
-    /* color: #D1D1D1; */
     outline: none; 
     cursor: pointer;
 }
@@ -80,7 +77,6 @@ main{
     margin-bottom: 10px;
     box-shadow: 5px;
     border-radius: 10px;
-    /* border: 1px solid #D1D1D1; */
     font-size: 1rem;
     cursor: pointer;
     border: #D1D1D1 1px solid;
@@ -91,8 +87,6 @@ main{
     justify-content: center;
     align-items: flex-start;
     float: right;
-    /* margin-top: -420px;
-    margin-right: 70px; */
 }
 
 .tape img {
@@ -104,7 +98,7 @@ main{
     position: absolute;
     width: 15%;
     overflow: hidden;
-    top: 37%;
+    top: 35%;
 }
 .songTitle {
     display: inline-block;
