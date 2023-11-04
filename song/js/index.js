@@ -11,6 +11,14 @@ for (var i = 0; i < song.length; i++) {
   titleDiv.textContent = songTitle.replace(/♬/g, '');
   titleDiv.classList.add("view");
 
+  // 오름차순으로 정렬
+  song.sort(function (a, b) {
+      if (a.year !== b.year) {
+          return a.year - b.year;
+      }
+      return a.title.localeCompare(b.title);
+  });
+
   titleDiv.addEventListener("click", (function (audio, titleDiv, songTitle) {
     return function () {
       if (currentAudio) {
