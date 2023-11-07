@@ -64,20 +64,18 @@ button{
     right: 0;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 770px) {
     .frame-container{
         justify-content: center;
     }
 
     .old-film-box {
-        margin-left: -10%;
+        margin-left: -25%;
     }
 
     .haduri-film-box {
         margin-left: -50%;
         margin-top: 35%;
-        /* margin-left: -240px; */
-        /* margin-top: 170px; */
     }
 
     img{
@@ -85,9 +83,10 @@ button{
     }
 
     button {
-        width: 20vw;
-        height: 7vh;
+        width: 17vw;
+        height: 4vh;
         top: 140%;
+        font-size: 0.9rem;
     }
 }
 
