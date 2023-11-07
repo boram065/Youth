@@ -203,10 +203,31 @@ img{
     border: 0;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 770px) {
+    .frame {
+        position: relative;
+        left: -5%;
+    }
+
     .replace,
     .upload {
         height: 3.5vh;
+    }
+
+    .write-container {
+        position: relative;
+        left: 10%;
+    }
+
+    .input {
+        width: 40vw;
+    }
+
+    .song-container {
+        position: relative;
+        width: 40vw;
+        left: -25%;
+        
     }
 }
 
