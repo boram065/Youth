@@ -126,6 +126,17 @@ span{
         top: 5%;
     }
 
+    .container3 {
+        position: relative;
+    }
+
+    .right {
+        position: absolute;
+        writing-mode: vertical-lr;
+        white-space: nowrap;
+        left: 5%;
+    }
+
     .container4 {
         text-align: center;
         margin-left: 25%;
