@@ -72,8 +72,24 @@ body {
     border-radius: 20px;
 }
 
+hr {
+    height: 1px;
+    background-color: #DEA465;
+    border: none;
+}
 
-@media screen and (max-width: 720px) {
+.first-hr {
+    position: relative;
+    top: 80px;
+}
+
+.second-hr {
+    position: relative;
+    bottom: 40px;
+}
+
+
+@media screen and (max-width: 770px) {
     .backgroundImg {
         width: 100vw;
         height: 100vh;
@@ -108,28 +124,20 @@ body {
     .btn {
         width: 20vw;
         height: 4vh;
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .btnContainer {
         margin-top: 15%;
         margin-left: -10%;
     }
-
-    hr {
-        height: 1px;
-        background-color: #DEA465;
-        border: none;
-    }
     
     .first-hr {
-        position: relative;
-        top: 120px;
+        top: 100px;
     }
     
     .second-hr {
-        position: relative;
-        bottom: 80px;
+        bottom: 40px;
     }
 
 }
@@ -137,6 +145,11 @@ body {
 @media screen and (max-width: 540px) {
     .backgroundImg img {
         object-fit: cover;
+    }
+
+    .Container {
+        justify-content: center;
+        text-align: center;
     }
 
     .background {
@@ -152,7 +165,7 @@ body {
     }
 
     .gogosing img {
-        width: 65%;
+        width: 80%;
         height: 50%;
     }
 
@@ -161,11 +174,30 @@ body {
     }
 
     .text1 {
-        width: 60vw;
+        width: 70vw;
         font-size: 0.9rem;
     }
 
+    .btnContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 25%;
+        top: -5%;
+    }
+
     .btn {
-        margin-top: -30px;
+        width: 80%;
+        height: 50%;
+        border-radius: 30px;
+    }
+
+    .first-hr {
+        top: 90px;
+    }
+
+    .second-hr {
+        bottom: 20px;
     }
 }
