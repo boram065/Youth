@@ -202,3 +202,14 @@ img{
     overflow: hidden;
     border: 0;
 }
+
+@media screen and (max-width: 720px) {
+    .replace,
+    .upload {
+        height: 3.5vh;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    
+}

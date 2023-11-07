@@ -63,3 +63,34 @@ button{
     position: absolute;
     right: 0;
 }
+
+@media screen and (max-width: 720px) {
+    .frame-container{
+        justify-content: center;
+    }
+
+    .old-film-box {
+        margin-left: -10%;
+    }
+
+    .haduri-film-box {
+        margin-left: -50%;
+        margin-top: 35%;
+        /* margin-left: -240px; */
+        /* margin-top: 170px; */
+    }
+
+    img{
+        height: 50vw;
+    }
+
+    button {
+        width: 20vw;
+        height: 7vh;
+        top: 140%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    
+}
