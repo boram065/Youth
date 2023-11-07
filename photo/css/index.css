@@ -42,7 +42,7 @@ body {
     height: 70%;
 }
 
-.container {
+.Container {
     display: flex;
     flex-direction: column;
 }
@@ -75,30 +75,61 @@ body {
 
 @media screen and (max-width: 720px) {
     .backgroundImg {
-        position: relative;
         width: 100vw;
         height: 100vh;
+    }
+    
+    .gogosing {
+        position: relative;
     }
 
     .logo {
         width: 50%;
     }
 
+    .title {
+        width: 60%;
+    }
+
     .gogosing img  {
-        width: 40%;
-        height: 45%;
-        margin-top: 50px;
+        width: 50%;
+        height: 50%;
     }
 
     .text1 {
-        width: 50vw;
-        font-size: 1rem;
+        width: 40vw;
+        font-size: 1.3rem;
+    }
+    
+    .text2 {
+        font-size: 0.8rem;
     }
 
     .btn {
-        width: 130px;
-        height: 35px;
+        width: 20vw;
+        height: 4vh;
         font-size: 0.7rem;
+    }
+
+    .btnContainer {
+        margin-top: 15%;
+        margin-left: -10%;
+    }
+
+    hr {
+        height: 1px;
+        background-color: #DEA465;
+        border: none;
+    }
+    
+    .first-hr {
+        position: relative;
+        top: 120px;
+    }
+    
+    .second-hr {
+        position: relative;
+        bottom: 80px;
     }
 
 }
