@@ -64,7 +64,8 @@ button{
     right: 0;
 }
 
-.screen1 {
+.screen1,
+.screen2 {
     display: none;
 }
 
