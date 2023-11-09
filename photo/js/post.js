@@ -225,3 +225,12 @@ const element = document.querySelector('.element');
 //         element.style.left = percentage + '%';
 //     });
 // });
+
+// 버튼을 클릭했을 때 화면 전환하기
+var screen1 = document.querySelector(".screen1");
+var screen2 = document.querySelector(".screen2");
+
+function next() {
+    screen1.style.display = "none";
+    screen2.style.display = "block";
+}

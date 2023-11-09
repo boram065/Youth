@@ -203,6 +203,11 @@ img{
     border: 0;
 }
 
+section.screen1,
+section.screen2 {
+    display: none;
+}
+
 @media screen and (max-width: 770px) {
     .frame {
         position: relative;
@@ -232,5 +237,17 @@ img{
 }
 
 @media screen and (max-width: 540px) {
-    
+    /* .frame,
+    .write-container {
+        display: none;
+    } */
+
+    section.frame,
+    section.write-container {
+        display: none;
+    }
+
+    section.screen1 {
+        display: flex;
+    }
 }
