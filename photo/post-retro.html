@@ -80,6 +80,85 @@
             </div>
         </div>
     </section>
+
+    <section class="screen1">
+        <div class="photos">
+            <div class="haduri-logo"></div>
+            <div id="image-show1" class="photo-frame image-show">
+                <input type="file" id="chooseFile1" name="chooseFile1" accept="image/*" onchange="loadFile(this, 'image-show1')">
+                <label for="chooseFile1">이미지 업로드</label>
+            </div>
+            <div id="image-show2" class="photo-frame image-show">
+                <input type="file" id="chooseFile2" name="chooseFile2" accept="image/*" onchange="loadFile(this, 'image-show2')">
+                <label for="chooseFile2">이미지 업로드</label> 
+            </div>
+            <div id="image-show3" class="photo-frame image-show">
+                <input type="file" id="chooseFile3" name="chooseFile3" accept="image/*" onchange="loadFile(this, 'image-show3')">
+                <label for="chooseFile3">이미지 업로드</label> 
+            </div>
+            <div id="image-show4" class="photo-frame image-show">
+                <input type="file" id="chooseFile4" name="chooseFile4" accept="image/*" onchange="loadFile(this, 'image-show4')">
+                <label for="chooseFile4">이미지 업로드</label> 
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="f-title">Youth</p>
+        </div>
+
+        <div class="button1-container">
+            <div class="button">
+                <button onclick="next()">다음 단계</button>
+            </div>
+
+            <div class="list_circle_btn">
+                <ul>
+                    <li class="on" onclick="changeScreen(1)"></li>
+                    <li onclick="changeScreen(2)"></li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="screen2" style="display: none;">
+        <div class="write">
+            <textarea name="input" class="input" id="input" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
+            <div class="btn-container">
+                <button class="replace" onclick="replaceText()">글씨체 미리보기</button>
+            </div>
+        </div>
+        <div class="song-container">
+            <div class="song-title">
+                <div class="title">추억의 노래를 선택할 수 있어요</div>
+            </div>
+            <div class="line">
+                <div class="playline">
+                    <div class="element"></div>
+                </div>
+            </div>
+            <div class="play">
+                <button class="backBtn"><i class='bx bx-skip-previous' ></i></button>
+                <button id="playBtn" class="playBtn"><i class='bx bx-play'></i></button>
+                <button id="nextBtn" class="nextBtn"><i class='bx bx-skip-next'></i></button>
+            </div>
+
+            <div class="button2-container">
+                <div class="button">
+                    <button onclick="">업로드</button>
+                </div>
+
+                <div class="list_circle_btn">
+                    <ul>
+                        <li onclick="changeScreen(1)"></li>
+                        <li class="on" onclick="changeScreen(2)"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 	<script src="../js/nav.js"></script>
     <script src="./js/post.js"></script>
     <script src="../song/js/song.js"></script>
