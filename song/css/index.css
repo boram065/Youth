@@ -116,7 +116,7 @@ main{
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 770px) {
     .song-container {
         display: flex;
         align-items: center;
@@ -140,7 +140,7 @@ main{
     }
 
     .viewContainer { 
-        max-height: 35vh;
+        max-height: 40vh;
     }
 
     .tape { 
@@ -148,12 +148,12 @@ main{
     }
 
     .tape img {
-        width: 60vw;
-        height: 40vh;
+        width: 50vw;
+        height: 30vh;
     }
 
     .title-container {
-        top: 22%;
+        top: 25%;
         font-size: 0.8rem;
     }
 }
