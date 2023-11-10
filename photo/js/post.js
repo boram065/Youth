@@ -12,8 +12,8 @@ function loadFile(input, imageShowId) {
     newImage.style.objectFit = "contain";
 }
 
-function replaceText() {
-    var textarea = document.getElementById('input');
+function replaceText(id) {
+    var textarea = document.getElementById(id);
     var text = textarea.value;
 
     text = text.replaceAll("가", "ㄱr");
@@ -103,7 +103,7 @@ var progressBar = document.querySelector('.element');
 
 songTitleDiv.style.animationPlayState = 'paused'; 
 
-function playSong(index) {
+function playSong() {
     var selectedSong = song[index];
     if (selectedSong) {
         songTitleDiv.textContent = selectedSong.title;
@@ -229,8 +229,8 @@ const element = document.querySelector('.element');
 // 버튼을 클릭했을 때 화면 전환하기
 var screen1 = document.querySelector(".screen1");
 var screen2 = document.querySelector(".screen2");
-var li1 = document.getElementById('li:nth-child(1)');
-var li2 = document.getElementById('li:nth-child(2)');
+var li1 = document.getElementById('.list_circle_btn li:nth-child(1)');
+var li2 = document.getElementById('.list_circle_btn li:nth-child(2)');
 
 function next() {
     screen1.style.display = "none";
