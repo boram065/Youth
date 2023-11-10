@@ -15,8 +15,6 @@ main{
     align-items: center;
     width: 80vw;
     justify-content: space-between;
-    /* margin-top: 70px;
-    margin-left: 130px; */
 }
 
 .search {
@@ -34,7 +32,6 @@ main{
     box-shadow: 5px;
     border-radius: 10px;
     border: 1px solid #D1D1D1;
-    /* color: #D1D1D1; */
     outline: none; 
     cursor: pointer;
 }
@@ -65,8 +62,7 @@ main{
     margin-bottom: 5%;
     column-gap: 2%;
     backdrop-filter: blur(38px);
-    /* background-color: rgba(255, 255, 255, 0.607); */
-    background-color: white;
+    background-color: var(--white);
     z-index: -1;
 }
 .circle1,
@@ -112,8 +108,7 @@ main{
     margin-bottom: 10px;
     box-shadow: 5px;
     border-radius: 10px;
-    /* border: 1px solid #D1D1D1; */
-    font-size: 1rem;
+    font-size: var(--normal-font-size);
     cursor: pointer;
     border: #D1D1D1 1px solid;
 }
@@ -123,8 +118,6 @@ main{
     justify-content: center;
     align-items: center;
     float: right;
-    /* margin-top: -420px;
-    margin-right: 70px; */
 }
 
 .tape img {
@@ -142,7 +135,7 @@ main{
     display: inline-block;
     white-space: nowrap;
     top: 38%;
-    font-size: 1rem;
+    font-size: var(--normal-font-size);
     animation: marquee 8s linear infinite;
 }
 @keyframes marquee {
@@ -192,7 +185,7 @@ main{
 
     .title-container {
         top: 24.2%;
-        font-size: 0.8rem;
+        font-size: var(--small-font-size);
     }
 }
 
