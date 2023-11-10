@@ -7,6 +7,14 @@ function nextFrame() {
 }
 
 function preFrame() {
-    screen1.style.display = "none";
-    screen2.style.display = "block";
+    screen1.style.display = "block";
+    screen2.style.display = "none";
+}
+
+function retro() {
+    window.location.href="post-retro.html";
+}
+
+function haduri() {
+    window.location.href="post-haduri.html";
 }
