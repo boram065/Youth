@@ -585,6 +585,48 @@ var song = [
         "title": "♬ 신형원 - 개똥벌레 ♬",
         "song": "/song/songMp3/신형원-개똥벌레(1987).mp3",
         "year": 1997
+    },
+
+    {
+        "id": 86,
+        "title": "♬ 나미 - 인디언 인형처럼 ♬",
+        "song": "/song/songMp3/나미-인디언 인형처럼(1989).mp3",
+        "year": 1989
+    },
+
+    {
+        "id": 87,
+        "title": "♬ 박진영 - 날 떠나지마 ♬",
+        "song": "/song/songMp3/박진영-날 떠나지마(1994).mp3",
+        "year": 1994
+    },
+
+    {
+        "id": 88,
+        "title": "♬ 박진영 - Honey ♬",
+        "song": "/song/songMp3/박진영-Honey(1998).mp3",
+        "year": 1998
+    },
+
+    {
+        "id": 89,
+        "title": "♬ 코요태 - 순정 ♬",
+        "song": "/song/songMp3/코요태-순정(1998).mp3",
+        "year": 1998
+    },
+
+    {
+        "id": 90,
+        "title": "♬ 쿨 - 슬퍼지려하기전에 ♬",
+        "song": "/song/songMp3/쿨-슬퍼지려하기전에(1995).mp3",
+        "year": 1995
+    },
+
+    {
+        "id": 91,
+        "title": "♬ HOT - 행복 ♬",
+        "song": "/song/songMp3/HOT-행복(1997).mp3",
+        "year": 1997
     }
 
 ];
