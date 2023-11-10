@@ -70,7 +70,7 @@ nav {
 }
 
 /*태블릿*/
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 770px) {
     .nav-item:first-child {
         margin-right: 70px;
     }

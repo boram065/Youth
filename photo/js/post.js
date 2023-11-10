@@ -225,3 +225,29 @@ const element = document.querySelector('.element');
 //         element.style.left = percentage + '%';
 //     });
 // });
+
+// 버튼을 클릭했을 때 화면 전환하기
+var screen1 = document.querySelector(".screen1");
+var screen2 = document.querySelector(".screen2");
+var li1 = document.getElementById('li:nth-child(1)');
+var li2 = document.getElementById('li:nth-child(2)');
+
+function next() {
+    screen1.style.display = "none";
+    screen2.style.display = "block";
+}
+
+function changeScreen(screenNumber) {
+    if (screenNumber === 1) {
+        screen1.style.display = 'block';
+        screen2.style.display = 'none';
+        li1.classList.add('on');
+        li2.classList.remove('on');
+
+    } else if (screenNumber === 2) {
+        screen1.style.display = 'none';
+        screen2.style.display = 'block';
+        li1.classList.remove('on');
+        li2.classList.add('on');
+    }
+}

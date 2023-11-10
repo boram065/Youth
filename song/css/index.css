@@ -170,9 +170,24 @@ main{
 
     .view {
         width: 65vw;
+        height: 6vh;
+        padding-left: 15px;
     }
 
     .tape img {
         width: 70vw;
+        height: 25vh;
+    }
+
+    .title-container {
+        top: 23%;
+    }
+
+    .title-container p {
+        font-size: 0.7rem;
+    }
+
+    .viewContainer {
+        max-height: 45vh;
     }
 }

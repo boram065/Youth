@@ -203,13 +203,175 @@ img{
     border: 0;
 }
 
-@media screen and (max-width: 720px) {
+section.screen1,
+section.screen2 {
+    display: none;
+}
+
+@media screen and (max-width: 770px) {
+    .frame {
+        position: relative;
+        left: -5%;
+    }
+
     .replace,
     .upload {
         height: 3.5vh;
     }
+
+    .write-container {
+        position: relative;
+        left: 10%;
+    }
+
+    .input {
+        width: 40vw;
+    }
+
+    .song-container {
+        position: relative;
+        width: 40vw;
+        left: -25%;
+        
+    }
+    
 }
 
 @media screen and (max-width: 540px) {
-    
+    section.frame,
+    section.write-container {
+        display: none;
+    }
+
+    section.screen1,
+    section.screen2 {
+        display: block;
+    }
+
+    .screen1 {
+        /* transform: rotate(-5deg); */
+        /* position: absolute; */
+        position: relative;
+        width: 250px;
+        background-color: #000000;
+        height: 76%;
+        top: -3%;
+    }
+
+    .photos {
+        height: 90%;
+    }
+
+    .photo-frame {
+        width:54vw;
+    }
+
+    .haduri-logo {
+        left: 12%;
+        top: 5%;
+    }
+
+    .footer {
+        margin-top: -5%;
+    }
+
+    .button {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 5%;
+    }
+
+    .button button {
+        background-color: var(--main-color);
+        font-size: 1.2rem;
+        color: #fff;
+        border: 0;
+        border-radius: 50px;
+        width: 55vw;
+        height: 5.5vh;
+    }
+
+    .list_circle_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 5%;
+        right: 8%;
+    }
+
+    .list_circle_btn ul {
+        display: flex;
+    }
+
+    .list_circle_btn ul li {
+        list-style-type: none;
+        width: 8px;
+        height: 8px;
+        background-color: #FFE4C6;
+        margin: 0 2px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .list_circle_btn ul li.on {
+        background-color: var(--main-color);
+    }
+
+    .screen2 {
+        position: relative;
+        left: -5%;
+    }
+
+    .write {
+        position: relative;
+        left: 68%;
+    }
+
+    .input {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .song-container {
+        position: relative;
+        width: 80vw;
+        height: 10vh;
+        left: 5%;
+    }
+
+    .song-title {
+        position: absolute;
+        top: 15%;
+        font-size: 0.8rem;
+    }
+
+    .line {
+        position: relative;
+        top: 55%;
+    }
+
+    .playline {
+        width: 60vw;
+    }
+
+    .play {
+        position: relative;
+        top: 65%;
+        right: 3%;
+        grid-column-gap: 20vw;
+    }
+
+    .button1-container {
+        display: block;
+        position: relative;
+        top: 5%;
+    }
+
+    .button2-container {
+        display: block;
+        position: relative;
+        top: 130%;
+    }
 }

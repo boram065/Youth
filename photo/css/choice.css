@@ -64,20 +64,23 @@ button{
     right: 0;
 }
 
-@media screen and (max-width: 720px) {
+.screen1,
+.screen2 {
+    display: none;
+}
+
+@media screen and (max-width: 770px) {
     .frame-container{
         justify-content: center;
     }
 
     .old-film-box {
-        margin-left: -10%;
+        margin-left: -15%;
     }
 
     .haduri-film-box {
         margin-left: -50%;
         margin-top: 35%;
-        /* margin-left: -240px; */
-        /* margin-top: 170px; */
     }
 
     img{
@@ -85,12 +88,109 @@ button{
     }
 
     button {
-        width: 20vw;
-        height: 7vh;
+        width: 17vw;
+        height: 4vh;
         top: 140%;
+        font-size: 0.9rem;
     }
 }
 
 @media screen and (max-width: 540px) {
+    .frame-container {
+        display: none;
+    }
+
+    .screen1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .screen1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.40);
+        z-index: 1;
+    }
+
+    .screen2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .screen2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.40);
+        z-index: 1;
+    }
+
+    .old-film,
+    .haduri-film {
+        position: relative;
+    }
+
+    .haduri-film {
+        position: relative;
+    }
+
+    .old-film img {
+        width: 80vw;
+        height: 70vh;
+    }
+
+    .haduri-film img {
+        width: 70vw;
+        height: 70vh;
+    }
+
+    .old-text {
+        position: absolute;
+        top: 25%;
+        left: 20%;
+        z-index: 2;
+    }
+
+    .haduri-text {
+        position: absolute;
+        top: 25%;
+        left: 15%;
+        z-index: 2;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .text h1 {
+        margin-right: 25%;
+    }
+
+    .haduri-text > .text p {
+        position: relative;
+        right: 10%;
+    }
+
+    .btn {
+        margin-left: 3%;
+    }
     
+    .btn button {
+        position: relative;
+        width: 45vw;
+        height: 6vh;
+        font-size: 1.3rem;
+        margin-top: 10%;
+    }
 }
