@@ -85,6 +85,40 @@ span{
     font-weight: 100;
 }
 
+.container2,
+.container3
+.container4 {
+    height: 100vh;
+    display: flex;
+}
+
+.left,
+.right {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+.park {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.container2.visible .left,
+.container3.visible .right,
+.container4.visible .park {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container3.visible span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container3,
+.container4 {
+    position: relative;
+}
 @media screen and (max-width: 770px){
     .logo, .last-box img {
         width: 50%;
@@ -141,39 +175,12 @@ span{
     .last-box p {
         font-size: var(--smaller-font-size);
     }
-}
-
-.container2,
-.container3
-.container4 {
-    height: 100vh;
-    display: flex;
-}
-
-.left,
-.right {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
-}
-.park {
-    opacity: 0;
-    transition: opacity 1s, transform 1s;
-}
-
-.container2.visible .left,
-.container3.visible .right,
-.container4.visible .park {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.container3.visible span {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.container3,
-.container4 {
-    position: relative;
+    .container2.visible .left {        
+        align-items: end;
+        width: 100vw;
+        opacity: 1;
+        display: flex;
+        transform: translateY(0);
+    }
+    
 }
