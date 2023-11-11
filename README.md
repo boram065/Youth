@@ -19,9 +19,9 @@
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Round%20Pushpin.png" alt="Round Pushpin" width="15" height="15" /> Developer
 </summary>
   <br>
-   haewon <br>  <a href="https://www.github.com/"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=Github&logoColor=white" /></a>
+   haewon <br>  <a href="https://github.com/haewon1106/"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=Github&logoColor=white" /></a>
 <br>
-   boram <br> <a href="https://www.github.com/"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=Github&logoColor=white" /></a>
+   boram <br> <a href="https://www.github.com/boram065"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=Github&logoColor=white" /></a>
    <br><br>
 </details>
 <details>
