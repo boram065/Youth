@@ -1,3 +1,8 @@
+var video = document.querySelector('.main-video');
+    
+    // 동영상 재생 속도를 0.5로 설정합니다.
+video.playbackRate = 0.9;
+
 // 화면에 보여지는지 여부를 확인하는 함수
 function isElementInViewport(element) {
     var rect = element.getBoundingClientRect();
