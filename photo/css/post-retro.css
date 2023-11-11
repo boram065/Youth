@@ -108,6 +108,8 @@ img{
 }
 
 .title {
+    position: relative;
+    top: -9%;
     margin-top: 1vw;
     display: inline-block;
     animation: marquee 8s linear infinite;
