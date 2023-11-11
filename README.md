@@ -20,7 +20,7 @@
 <br>
 <details>
 <summary>
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Round%20Pushpin.png" alt="Round Pushpin" width="15" height="15" /> 주요기능
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Round%20Pushpin.png" alt="Round Pushpin" width="15" height="15" /> Main Fuction
 </summary>
   <br>
   
@@ -81,5 +81,4 @@
    <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=Github&logoColor=white" />
   <br><br>
 </details>
-
 
