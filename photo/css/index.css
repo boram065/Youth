@@ -38,7 +38,7 @@ body {
 
 
 .gogosing img  {
-    width: 30vw;
+    width: 35vw;
     height: 70%;
 }
 
@@ -171,6 +171,8 @@ hr {
     }
 
     .gogosing img {
+        position: relative;
+        left: 5%;
         width: 80%;
         height: 50%;
     }
@@ -189,7 +191,7 @@ hr {
         justify-content: center;
         align-items: center;
         position: relative;
-        left: 25%;
+        left: 27%;
         top: -5%;
     }
 

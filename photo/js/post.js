@@ -21,7 +21,7 @@ function replaceText(id) {
     text = text.replaceAll("게", "つㅓl");
     text = text.replaceAll("고", "ヱ");
     text = text.replaceAll("귀", "구l");
-    text = text.replaceAll("ュ", "그");
+    text = text.replaceAll("그", "ュ");
     text = text.replaceAll("긔", "그i");
     text = text.replaceAll("기", "ブl");
     text = text.replaceAll("깨", "까l");
@@ -89,7 +89,6 @@ function replaceText(id) {
     textarea.value = text;
 }
 
-
 var songIndex = 0; // 현재 재생 중인 노래의 인덱스
 var isPlaying = false; // 노래가 재생 중인지 여부를 나타내는 변수
 var audio = new Audio(); // 오디오 요소 생성
@@ -102,14 +101,36 @@ var backBtns = document.querySelectorAll('.backBtn');
 
 songTitleDiv.style.animationPlayState = 'paused'; 
 
-function playSong() {
-    var selectedSong = song[songIndex];
+let currentSongIndex = -1;
+let playedSongs = [];
+
+function backSong() {
+    if (playedSongs.length > 1) {
+        currentSongIndex = playedSongs.pop();
+        playSong(currentSongIndex);
+    }
+}
+
+function playSong(index) {
+    const selectedSong = song[index];
     if (selectedSong) {
         songTitleDiv.textContent = selectedSong.title;
         audio.src = selectedSong.song;
         audio.play();
         isPlaying = true;
+
+        if (currentSongIndex !== index) {
+            playedSongs.push(currentSongIndex);
+            currentSongIndex = index;
+        }
     }
+}
+
+function nextSong() {
+    const randomIndex = Math.floor(Math.random() * song.length);
+    playedSongs.push(currentSongIndex);
+    currentSongIndex = randomIndex;
+    playSong(currentSongIndex);
 }
 
 playBtns.forEach(function(playBtn) {
@@ -138,20 +159,6 @@ backBtns.forEach(function(backBtn) {
         backSong();
     });
 });
-
-function nextSong() {
-    songIndex = Math.floor(Math.random() * song.length);
-    playSong(songIndex);
-    songTitleDiv.style.animationPlayState = 'running';
-    playBtn.innerHTML = '<i class="bx bx-pause"></i>';
-}
-
-function backSong() {
-    songIndex = (songIndex - 1 + song.length) % song.length;
-    playSong(songIndex);
-    songTitleDiv.style.animationPlayState = 'running';
-    playBtn.innerHTML = '<i class="bx bx-pause"></i>';
-}
 
 // 실행 안됨. 시간 나면 수정해보기
 function makeDraggable(div) {
