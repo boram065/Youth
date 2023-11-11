@@ -103,7 +103,6 @@ main{
 .songTitle {
     display: inline-block;
     white-space: nowrap;
-    top: 38%;
     font-size: var(--normal-font-size);
     animation: marquee 8s linear infinite;
 }
@@ -137,6 +136,7 @@ main{
     
     .view {
         width: 55vw;
+        height: 6vh;
     }
 
     .viewContainer { 
@@ -153,7 +153,7 @@ main{
     }
 
     .title-container {
-        top: 25%;
+        top: 23%;
         font-size: var(--small-font-size);
     }
 }
