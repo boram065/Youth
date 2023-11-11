@@ -66,15 +66,15 @@ body {
 .btn {
     width: 140px;
     height: 40px;
-    color: white;
-    background-color: #DEA465;
+    color: var(--white);
+    background-color: var(--main-color);
     border: 0;
     border-radius: 20px;
 }
 
 hr {
     height: 1px;
-    background-color: #DEA465;
+    background-color: var(--main-color);
     border: none;
 }
 
@@ -118,7 +118,7 @@ hr {
     }
     
     .text2 {
-        font-size: 0.8rem;
+        font-size: var(--small-font-size);
     }
 
     .btn {

@@ -12,8 +12,8 @@ function loadFile(input, imageShowId) {
     newImage.style.objectFit = "contain";
 }
 
-function replaceText() {
-    var textarea = document.getElementById('input');
+function replaceText(id) {
+    var textarea = document.getElementById(id);
     var text = textarea.value;
 
     text = text.replaceAll("가", "ㄱr");
@@ -95,16 +95,15 @@ var isPlaying = false; // 노래가 재생 중인지 여부를 나타내는 변�
 var audio = new Audio(); // 오디오 요소 생성
 
 var songTitleDiv = document.querySelector('.song-title .title');
-var playBtn = document.getElementById('playBtn');
-var nextBtn = document.getElementById('nextBtn');
-var backBtn = document.querySelector('.backBtn');
 var progressBar = document.querySelector('.element');
-
+var playBtns = document.querySelectorAll('.playBtn');
+var nextBtns = document.querySelectorAll('.nextBtn');
+var backBtns = document.querySelectorAll('.backBtn');
 
 songTitleDiv.style.animationPlayState = 'paused'; 
 
-function playSong(index) {
-    var selectedSong = song[index];
+function playSong() {
+    var selectedSong = song[songIndex];
     if (selectedSong) {
         songTitleDiv.textContent = selectedSong.title;
         audio.src = selectedSong.song;
@@ -113,44 +112,46 @@ function playSong(index) {
     }
 }
 
-function nextSong() {
+playBtns.forEach(function(playBtn) {
+    playBtn.addEventListener('click', function() {
+        if (isPlaying) {
+            audio.pause();
+            songTitleDiv.style.animationPlayState = 'paused';
+            playBtn.innerHTML = '<i class="bx bx-play"></i>';
+        } else {
+            audio.play();
+            songTitleDiv.style.animationPlayState = 'running';
+            playBtn.innerHTML = '<i class="bx bx-pause"></i>';
+        }
+        isPlaying = !isPlaying;
+    });
+});
+
+nextBtns.forEach(function(nextBtn) {
+    nextBtn.addEventListener('click', function() {
+        nextSong();
+    });
+});
+
+backBtns.forEach(function(backBtn) {
+    backBtn.addEventListener('click', function() {
+        backSong();
+    });
+});
+
+function nextSong(playBtn) {
     songIndex = Math.floor(Math.random() * song.length);
     playSong(songIndex);
-    songTitleDiv.style.animationPlayState = 'running'
-    playBtn.innerHTML = '<i class="bx bx-pause"></i>'; // 일시 정지 아이콘으로 변경
-}
-
-function playPause() {
-    if (isPlaying) {
-        audio.pause();
-        songTitleDiv.style.animationPlayState = 'paused';
-        playBtn.innerHTML = '<i class="bx bx-play"></i>'
-    } else {
-        audio.play();
-        songTitleDiv.style.animationPlayState = 'running'
-        playBtn.innerHTML = '<i class="bx bx-pause"></i>';
-    }
-    isPlaying = !isPlaying;
-}
-
-function backSong() {
-    songIndex = (songIndex - 1 + song.length) % song.length;
-    playSong(songIndex);
-    songTitleDiv.style.animationPlayState = 'running'
+    songTitleDiv.style.animationPlayState = 'running';
     playBtn.innerHTML = '<i class="bx bx-pause"></i>';
 }
 
-// Play 버튼 클릭 시 재생/일시정지 토글
-playBtn.addEventListener('click', playPause);
-
-// Next 버튼 클릭 시 다음 노래 재생
-nextBtn.addEventListener('click', nextSong);
-
-// Back 버튼 클릭 시 이전 노래 재생
-backBtn.addEventListener('click', backSong);
-
-
-
+function backSong(playBtn) {
+    songIndex = (songIndex - 1 + song.length) % song.length;
+    playSong(songIndex);
+    songTitleDiv.style.animationPlayState = 'running';
+    playBtn.innerHTML = '<i class="bx bx-pause"></i>';
+}
 
 // 실행 안됨. 시간 나면 수정해보기
 function makeDraggable(div) {
@@ -229,8 +230,8 @@ const element = document.querySelector('.element');
 // 버튼을 클릭했을 때 화면 전환하기
 var screen1 = document.querySelector(".screen1");
 var screen2 = document.querySelector(".screen2");
-var li1 = document.getElementById('li:nth-child(1)');
-var li2 = document.getElementById('li:nth-child(2)');
+var li1 = document.querySelector('.list_circle_btn li:nth-child(1)');
+var li2 = document.querySelector('.list_circle_btn li:nth-child(2)');
 
 function next() {
     screen1.style.display = "none";
