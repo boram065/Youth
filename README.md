@@ -13,7 +13,40 @@
 *그때 그 시절과, 현재의 문화가 섞여 이동하는 문화를 한번에 즐겨보세요*
 
 <br>
+<details>
+<summary>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Round%20Pushpin.png" alt="Round Pushpin" width="15" height="15" /> 주요기능
+</summary>
+  <br>
+  
+  - 사진기록
 
+    
+![image](https://github.com/haewon1106/Youth/assets/88700212/1cc219a8-67c2-4fd0-823c-fa8c25512105)
+
+
+  *- 원하는 프레임을 선택한 후, 싸이월드 폰트와 그 시절의 노래로 그 날의 일기를 기록할 수 있습니다.*
+
+  <br><br>
+
+  - 음악 듣기
+
+![image](https://github.com/haewon1106/Youth/assets/88700212/6a2443b3-dcb9-485a-a9db-a452d59b6cd3)
+
+
+  *- 그때 그 시절의 노래들을 들을 수 있습니다*
+
+  <br><br>
+
+  - 갤러리
+
+![image](https://github.com/haewon1106/Youth/assets/88700212/5c8f5191-eb85-4f7a-944a-dca26c854817)
+
+
+  *- 이전에 기록했던 사진과 글, 그리고 음악을 한번에 모아볼 수 있습니다*
+
+  <br><br>
+</details>
 <details>
 <summary>
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Round%20Pushpin.png" alt="Round Pushpin" width="15" height="15" /> Developer
