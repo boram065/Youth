@@ -1,0 +1,227 @@
+html,
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.main-vedio{
+    position: fixed;
+    height: 100vh;
+}
+video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /* min-width: 1920px; */
+    /* min-height: 1080px; */
+    /* position: relative; */
+}
+.image-container{
+    position: absolute;
+    width: 100vw; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.img-box{
+    width: 250px;
+    max-height: 100%;
+    margin-bottom: 5%;
+    transition: floatAnimation1 1s ease-in-out;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.popup-content {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.popup-img {
+    width: 16vw;
+    max-height: 100%;
+}
+.write-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 15vh;
+    margin-top: 5%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid var(--gray400);
+}
+
+.song-title {
+    width: 70%;
+    height: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.backBtn, .nextBtn, .playBtn {
+    background: none;
+    border: none;
+    width: 3.6vw;
+    height: 2.2vw;
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+.playline {
+    width: 23vw;
+    height: 0.28vw;
+    margin-top: 1.4vw;
+    background-color: #E3E3E3;
+    border-radius: 50px;
+}
+
+.element {
+    width: 0vw;
+    height: 0.28vw;
+    margin-top: 1.4vw;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    animation: lineMove 2s linear forwards;
+    animation-name: lineMove;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.song-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.write {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../image/paper.png);
+    box-shadow: 1px 3px 20px 1px rgba(175, 175, 175, 0.148);
+    /* padding: 2%; */
+    border-radius: 10px;
+    align-items: flex-start;
+    width: 28vw;
+    height: 25vw;
+    padding: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.song-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 15vh;
+    margin-top: 5%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid var(--gray400);
+}
+.play {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-top: 1vw;
+    grid-column-gap: 5vw;
+}
+
+@keyframes floatAnimation1 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes floatAnimation2 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes floatAnimation3 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+@media screen and (max-width: 1180px) {
+    .img-box{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .img-box{
+        height: 80vh;
+        width: 75vw;
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .popup-content{
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+        width: 100%;
+    }
+    .popup-img{
+        width: 77vw;
+        margin: 10% 0 30% 0;
+    }
+    .write{
+        width: 70vw;
+        height: 111vw;
+    }
+    .song-container{
+        display: flex;
+        width: 74vw;
+        row-gap: 5%;
+        justify-content: center;
+    }
+    .song-title{
+        margin: 0;
+    }
+    .playline{
+        width: 56vw;
+    }
+    .play{
+        column-gap: 28%;
+        width: 70%;
+        height: fit-content;
+    }
+    .write-container{
+        margin-bottom: 20%;
+    }
+}
