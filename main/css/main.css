@@ -142,3 +142,38 @@ span{
         font-size: var(--smaller-font-size);
     }
 }
+
+.container2,
+.container3
+.container4 {
+    height: 100vh;
+    display: flex;
+}
+
+.left,
+.right {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+.park {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.container2.visible .left,
+.container3.visible .right,
+.container4.visible .park {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container3.visible span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container3,
+.container4 {
+    position: relative;
+}
