@@ -139,14 +139,14 @@ backBtns.forEach(function(backBtn) {
     });
 });
 
-function nextSong(playBtn) {
+function nextSong() {
     songIndex = Math.floor(Math.random() * song.length);
     playSong(songIndex);
     songTitleDiv.style.animationPlayState = 'running';
     playBtn.innerHTML = '<i class="bx bx-pause"></i>';
 }
 
-function backSong(playBtn) {
+function backSong() {
     songIndex = (songIndex - 1 + song.length) % song.length;
     playSong(songIndex);
     songTitleDiv.style.animationPlayState = 'running';

@@ -59,10 +59,10 @@
 
     <section class="write-container">
         <div class="write">
-            <textarea name="input" class="input" id="input" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
+            <textarea name="input" class="input" id="input-1" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
             <div class="btn-container">
-                <button class="replace" onclick="replaceText()">글씨체 미리보기</button>
-                <button class="upload" onclick="">업로드</button>
+                <button class="replace" onclick="replaceText('input-1')">글씨체 미리보기</button>
+                <button class="upload" onclick="location.href='../Gallery/Gallery.html'">업로드</button>
             </div>
         </div>
         <div class="song-container">
@@ -85,21 +85,21 @@
     <section class="screen1">
         <div class="photos">
             <div class="haduri-logo"></div>
-            <div id="image-show1" class="photo-frame image-show">
-                <input type="file" id="chooseFile1" name="chooseFile1" accept="image/*" onchange="loadFile(this, 'image-show1')">
-                <label for="chooseFile1">이미지 업로드</label>
+            <div id="image-show1-1" class="photo-frame image-show">
+                <input type="file" id="chooseFile1-1" name="chooseFile1" accept="image/*" onchange="loadFile(this, 'image-show1-1')">
+                <label for="chooseFile1-1">이미지 업로드</label>
             </div>
-            <div id="image-show2" class="photo-frame image-show">
-                <input type="file" id="chooseFile2" name="chooseFile2" accept="image/*" onchange="loadFile(this, 'image-show2')">
-                <label for="chooseFile2">이미지 업로드</label> 
+            <div id="image-show2-1" class="photo-frame image-show">
+                <input type="file" id="chooseFile2-1" name="chooseFile2" accept="image/*" onchange="loadFile(this, 'image-show2-1')">
+                <label for="chooseFile2-1">이미지 업로드</label> 
             </div>
-            <div id="image-show3" class="photo-frame image-show">
-                <input type="file" id="chooseFile3" name="chooseFile3" accept="image/*" onchange="loadFile(this, 'image-show3')">
-                <label for="chooseFile3">이미지 업로드</label> 
+            <div id="image-show3-1" class="photo-frame image-show">
+                <input type="file" id="chooseFile3-1" name="chooseFile3" accept="image/*" onchange="loadFile(this, 'image-show3-1')">
+                <label for="chooseFile3-1">이미지 업로드</label> 
             </div>
-            <div id="image-show4" class="photo-frame image-show">
-                <input type="file" id="chooseFile4" name="chooseFile4" accept="image/*" onchange="loadFile(this, 'image-show4')">
-                <label for="chooseFile4">이미지 업로드</label> 
+            <div id="image-show4-1" class="photo-frame image-show">
+                <input type="file" id="chooseFile4-1" name="chooseFile4" accept="image/*" onchange="loadFile(this, 'image-show4-1')">
+                <label for="chooseFile4-1">이미지 업로드</label> 
             </div>
         </div>
         
@@ -114,8 +114,8 @@
 
             <div class="list_circle_btn">
                 <ul>
-                    <li class="on"></li>
-                    <li></li>
+                    <li class="on" onclick="changeScreen(1)"></li>
+                    <li onclick="changeScreen(2)"></li>
                 </ul>
             </div>
         </div>
@@ -124,9 +124,9 @@
 
     <section class="screen2" style="display: none;">
         <div class="write">
-            <textarea name="input" class="input" id="input" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
+            <textarea name="input" class="input" id="input-2" cols="30" rows="10" placeholder="ュ んı절ºl 글씨체로 バr진과 ㅎ古께 ブl록할 글을 남겨보パㅔ요"></textarea>
             <div class="btn-container">
-                <button class="replace" onclick="replaceText()">글씨체 미리보기</button>
+                <button class="replace" onclick="replaceText('input-2')">글씨체 미리보기</button>
             </div>
         </div>
         <div class="song-container">
@@ -151,8 +151,8 @@
 
                 <div class="list_circle_btn">
                     <ul>
-                        <li></li>
-                        <li class="on"></li>
+                        <li class="on" onclick="changeScreen(1)"></li>
+                        <li onclick="changeScreen(2)"></li>
                     </ul>
                 </div>
             </div>
